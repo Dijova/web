@@ -480,7 +480,7 @@ footer {
     height: 60px;
   }
 }
-@media (max-width: 768px) {
+/*@media (max-width: 768px) {
   .service-item img,
   .about-image img {
     width: 100%;
