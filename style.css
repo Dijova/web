@@ -502,7 +502,7 @@ footer {
     margin-left: 0;
 }
 
-@media (max-width: 768px) {
+/*@media (max-width: 768px) {
     nav ul {
         display: none;
         flex-direction: column;
@@ -525,4 +525,4 @@ footer {
     nav ul li.language {
         margin-top: 10px;
     }
-}
+}*/
