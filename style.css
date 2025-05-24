@@ -38,12 +38,13 @@ header .container {
 }
 
 .logo img {
-    height: 50px;
+    height: 60px;
 }
 
 nav ul {
     display: flex;
     list-style-type: none;
+    margin-top: 10px;
 }
 
 nav ul li {
@@ -320,7 +321,11 @@ footer {
 /* Responsive Design */
 @media (max-width: 768px) {
     header .container {
-        flex-direction: column;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 20px;
+        
     }
 
     nav ul {
@@ -329,7 +334,7 @@ footer {
 
     nav ul li {
         margin-left: 0;
-        margin-right: 20px;
+        margin-right: 10px;
     }
 
     #hero h1 {
@@ -453,9 +458,10 @@ footer {
 }
 @media (max-width: 768px) {
   header .container {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
   }
 
   nav ul {
@@ -471,7 +477,7 @@ footer {
   }
 
   .logo img {
-    height: 40px;
+    height: 60px;
   }
 }
 @media (max-width: 768px) {
@@ -490,10 +496,10 @@ footer {
     display: none;
     background-color: transparent;
     border: none;
-    font-size: 28px;
+    font-size: 30px;
     color: white;
     cursor: pointer;
-    margin-left: auto;
+    margin-left: 0;
 }
 
 @media (max-width: 768px) {
