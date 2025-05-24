@@ -319,7 +319,7 @@ footer {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+/*@media (max-width: 768px) {
     header .container {
         flex-direction: row;
         align-items: center;
@@ -353,7 +353,7 @@ footer {
     .footer-section {
         margin-right: 0;
     }
-}
+}*/
 
 /* Video en Hero */
 .hero-video {
