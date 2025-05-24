@@ -3,55 +3,56 @@ document.addEventListener('DOMContentLoaded', function() {
     quoteForm.addEventListener('submit', function(e) {
         e.preventDefault();
         
-    // Mostrar indicador de carga
-    const submitButton = quoteForm.querySelector('button[type="submit"]');
-    const originalButtonText = submitButton.textContent;
-    submitButton.textContent = 'Enviando...';
-    submitButton.disabled = true;
+        // Mostrar indicador de carga
+        const submitButton = quoteForm.querySelector('button[type="submit"]');
+        const originalButtonText = submitButton.textContent;
+        submitButton.textContent = 'Enviando...';
+        submitButton.disabled = true;
         
-    // Recopilar los datos del formulario
-    const formData = new FormData(quoteForm);
-    const data = Object.fromEntries(formData);
+        // Recopilar los datos del formulario
+        const formData = new FormData(quoteForm);
+        const data = Object.fromEntries(formData);
         
-    // Crear un elemento para mensajes
-    let messageEl = document.getElementById('form-message');
-    if (!messageEl) {
-        messageEl = document.createElement('div');
-        messageEl.id = 'form-message';
-        quoteForm.parentNode.insertBefore(messageEl, quoteForm.nextSibling);
-    }
+        // Crear un elemento para mensajes
+        let messageEl = document.getElementById('form-message');
+        if (!messageEl) {
+            messageEl = document.createElement('div');
+            messageEl.id = 'form-message';
+            quoteForm.parentNode.insertBefore(messageEl, quoteForm.nextSibling);
+        }
         
-    // Enviar datos a Google Sheets
-    fetch('https://script.google.com/macros/s/AKfycbxFkXgFlGUfAVALmkDtQfR5ZlGQ8SBx6e-010a7GV09QYdRcfPN6ktocBHYGEtJtdHg/exec', {
-        method: 'POST',
-        body: JSON.stringify(data),
-        headers: {
-            'Content-Type': 'application/json'
-        }
-    })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Error en la respuesta del servidor');
-        }
-        return response.json();
-    })
-    .then(result => {
-        if (result.result === 'success') {
-            messageEl.innerHTML = '<div class="success-message">¡Gracias por su solicitud! Nos pondremos en contacto pronto.</div>';
-            quoteForm.reset();
-        } else {
-            messageEl.innerHTML = '<div class="error-message">Hubo un error al procesar su solicitud. Por favor, inténtelo de nuevo.</div>';
-            console.error('Error del servidor:', result.error);
-        }
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        messageEl.innerHTML = '<div class="error-message">No se pudo enviar su solicitud. Por favor, verifique su conexión e inténtelo nuevamente.</div>';
-    })
-    .finally(() => {
-        // Restaurar el botón
-        submitButton.textContent = originalButtonText;
-        submitButton.disabled = false;
+        // Enviar datos a Google Sheets
+        fetch('https://script.google.com/macros/s/AKfycbxFkXgFlGUfAVALmkDtQfR5ZlGQ8SBx6e-010a7GV09QYdRcfPN6ktocBHYGEtJtdHg/exec', {
+            method: 'POST',
+            body: JSON.stringify(data),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Error en la respuesta del servidor');
+            }
+            return response.json();
+        })
+        .then(result => {
+            if (result.result === 'success') {
+                messageEl.innerHTML = '<div class="success-message">¡Gracias por su solicitud! Nos pondremos en contacto pronto.</div>';
+                quoteForm.reset();
+            } else {
+                messageEl.innerHTML = '<div class="error-message">Hubo un error al procesar su solicitud. Por favor, inténtelo de nuevo.</div>';
+                console.error('Error del servidor:', result.error);
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            messageEl.innerHTML = '<div class="error-message">No se pudo enviar su solicitud. Por favor, verifique su conexión e inténtelo nuevamente.</div>';
+        })
+        .finally(() => {
+            // Restaurar el botón
+            submitButton.textContent = originalButtonText;
+            submitButton.disabled = false;
+        });
     });
 
     const translations = {
@@ -273,7 +274,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Set default content to Spanish on load
-    updateContent('en');
+    updateContent('es');
 
         // Añadir logo de WhatsApp al botón flotante (si existe)
    /* const whatsappBtn = document.querySelector('.whatsapp-button');
@@ -286,9 +287,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }*/
     const menuToggle = document.getElementById('menu-toggle');
     const navUl = document.querySelector('nav ul');
-        if (menuToggle && navUl) {
-            menuToggle.addEventListener('click', () => {
-                navUl.classList.toggle('show');
+    if (menuToggle && navUl) {
+        menuToggle.addEventListener('click', () => {
+            navUl.classList.toggle('show');
         });
     }
 
