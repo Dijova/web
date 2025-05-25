@@ -5,13 +5,11 @@
     box-sizing: border-box;
 }
 
-
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #ffffff;
     background: #343434; 
-
 }
 
 .container {
@@ -34,16 +32,22 @@ header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 15px 20px;
 }
 
 .logo img {
     height: 50px;
 }
 
+/* Navegación */
+nav {
+    position: relative;
+}
+
 nav ul {
     display: flex;
     list-style-type: none;
+    align-items: center;
 }
 
 nav ul li {
@@ -54,16 +58,61 @@ nav ul li a {
     text-decoration: none;
     color: #ffffff;
     font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 #language-selector {
-    padding: 5px;
+    padding: 8px 12px;
     border-radius: 5px;
+    border: 1px solid #555;
+    background-color: #555;
+    color: white;
+    font-size: 14px;
+}
+
+/* Botón del menú hamburguesa */
+.menu-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    padding: 0;
+}
+
+.menu-toggle span {
+    width: 100%;
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Animación del menú hamburguesa */
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(8px, -8px);
 }
 
 /* Hero Section */
 #hero {
-    background-image: url('banner.jpg'); /* Asegúrate de que la ruta sea correcta */
+    background-image: url('banner.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -79,6 +128,7 @@ nav ul li a {
     padding: 40px;
     border-radius: 10px;
 }
+
 #hero h1 {
     font-size: 3em;
     margin-bottom: 20px;
@@ -236,6 +286,7 @@ nav ul li a {
     font-weight: bold;
     transition: background-color 0.3s ease;
 }
+
 #quote-form button:hover {
     background-color: #75a928;
 }
@@ -262,6 +313,7 @@ nav ul li a {
     border-radius: 5px;
     border-left: 5px solid #dc3545;
 }
+
 /* Footer */
 footer {
     background-color: #343434;
@@ -317,39 +369,6 @@ footer {
     border-top: 1px solid rgba(255,255,255,0.1);
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    header .container {
-        flex-direction: column;
-    }
-
-    nav ul {
-        margin-top: 20px;
-    }
-
-    nav ul li {
-        margin-left: 0;
-        margin-right: 20px;
-    }
-
-    #hero h1 {
-        font-size: 2em;
-    }
-
-    .service-grid,
-    .testimonial-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .footer-content {
-        flex-direction: column;
-    }
-
-    .footer-section {
-        margin-right: 0;
-    }
-}
-
 /* Video en Hero */
 .hero-video {
     position: absolute;
@@ -359,7 +378,7 @@ footer {
     height: 100%;
     object-fit: cover;
     z-index: -1;
-    filter: brightness(0.4); /* Ajusta de 0 a 1 (más bajo = más oscuro) */
+    filter: brightness(0.4);
 }
 
 #hero {
@@ -375,42 +394,25 @@ footer {
 
 .hero-overlay {
     z-index: 1;
-    background-color: rgba(0, 75, 135, 0.7);
+    background-color: rgba(0, 75, 135, 0.5);
     padding: 40px;
     border-radius: 10px;
 }
 
-
-/* Ajuste de transparencia del overlay en hero */
-.hero-overlay {
-    background-color: rgba(0, 75, 135, 0.5); /* antes 0.7, ahora más transparente */
-}
-
 /* Estilos para el botón de WhatsApp */
-.whatsapp-button img {
-    width: 48px;
-    height: 48px;
-    transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.whatsapp-button img:hover {
-    transform: scale(1.2);
-    filter: brightness(1.2);
-}
-
-
-/* WhatsApp Button mejorado */
 .whatsapp-button {
     position: fixed;
     bottom: 20px;
     right: 20px;
     z-index: 5000;
 }
+
 .whatsapp-button img {
     width: 60px;
     height: 60px;
     transition: transform 0.3s ease, filter 0.3s ease;
 }
+
 .whatsapp-button img:hover {
     transform: scale(1.2);
     filter: brightness(1.2);
@@ -422,101 +424,153 @@ footer {
     padding: 80px 0;
     color: #ffffff;
 }
+
 .about-grid {
     display: flex;
     flex-wrap: wrap;
     gap: 40px;
     align-items: center;
 }
+
 .about-text {
     text-align: justify;
     flex: 1;
     min-width: 280px;
 }
+
 .about-text ul {
     margin-top: 20px;
     list-style: none;
     padding-left: 0;
 }
+
 .about-text ul li {
     margin-bottom: 10px;
     font-size: 1.1em;
 }
+
 .about-image {
     flex: 1;
     min-width: 280px;
 }
+
 .about-image img {
     width: 100%;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
+
+/* Responsive Design */
 @media (max-width: 768px) {
-  header .container {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px;
-  }
-
-  nav ul {
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    padding-left: 0;
-    margin-top: 10px;
-  }
-
-  nav ul li {
-    margin: 5px 0;
-  }
-
-  .logo img {
-    height: 40px;
-  }
-}
-@media (max-width: 768px) {
-  .service-item img,
-  .about-image img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-  }
-
-  .offer-item {
-    width: 90%;
-  }
-}
-.menu-toggle {
-    display: none;
-    background-color: transparent;
-    border: none;
-    font-size: 28px;
-    color: white;
-    cursor: pointer;
-    margin-left: auto;
-}
-
-@media (max-width: 768px) {
-    nav ul {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: #343434;
-        padding: 10px 0;
-        position: absolute;
-        top: 70px;
-        left: 0;
+    /* Header responsive */
+    header .container {
+        padding: 10px 20px;
     }
 
-    nav ul.show {
+    .logo img {
+        height: 40px;
+    }
+
+    /* Mostrar botón hamburguesa */
+    .menu-toggle {
         display: flex;
     }
 
-    .menu-toggle {
-        display: block;
+    /* Ocultar menú por defecto en móvil */
+    nav ul {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #343434;
+        flex-direction: column;
+        width: 250px;
+        padding: 20px 0;
+        border-radius: 0 0 10px 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        transform: translateY(-10px);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
     }
 
-    nav ul li.language {
+    /* Mostrar menú cuando tiene clase 'show' */
+    nav ul.show {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    nav ul li {
+        margin: 0;
+        text-align: center;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 15px 20px;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    nav ul li:last-child a {
+        border-bottom: none;
+    }
+
+    .language-item {
+        padding: 15px 20px;
+    }
+
+    #language-selector {
+        width: 100%;
         margin-top: 10px;
+    }
+
+    /* Hero responsive */
+    #hero h1 {
+        font-size: 2em;
+    }
+
+    #hero .container {
+        padding: 20px;
+    }
+
+    /* Grids responsive */
+    .service-grid,
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-grid {
+        flex-direction: column;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-section {
+        margin-right: 0;
+    }
+
+    /* Imágenes responsive */
+    .service-item img,
+    .about-image img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .offer-item {
+        width: 90%;
+    }
+}
+
+/* Estilos adicionales para tabletas */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .testimonial-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
