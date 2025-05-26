@@ -254,7 +254,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Actualizar navegación
         const navLinks = {
             inicio: document.querySelector('a[href="#inicio"]'),
-            servicios: document.querySelector('a[href="#servicios"]'),
+            servicios: document.querySelector('a[href="#servicios"]'), // Volver a #servicios
             ofertas: document.querySelector('a[href="#ofertas"]'),
             testimonios: document.querySelector('a[href="#testimonios"]'),
             cotizacion: document.querySelector('a[href="#cotizacion"]'),
@@ -278,7 +278,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (ctaButton) ctaButton.textContent = content.heroButton;
 
         // Actualizar servicios
-        const servicesTitle = document.querySelector('#servicios h2');
+        const servicesTitle = document.querySelector('#servicios h2'); // Volver a #servicios
         if (servicesTitle) servicesTitle.textContent = content.sectionServicesTitle;
         
         const serviceItems = document.querySelectorAll('.service-item');
@@ -368,10 +368,28 @@ document.addEventListener('DOMContentLoaded', function() {
         link.addEventListener('click', function(e) {
             e.preventDefault();
             const targetId = this.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
+            
+            // Manejar el enlace de inicio
+            if (targetId === '#inicio') {
+                // Ir al inicio de la página (hero section)
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+                return;
+            }
+            
+            // Para la sección de servicios, usar el ID correcto
+            let targetSection;
+            if (targetId === '#servicios') {
+                targetSection = document.querySelector('#services');
+            } else {
+                targetSection = document.querySelector(targetId);
+            }
+            
             if (targetSection) {
                 const headerHeight = document.querySelector('header').offsetHeight;
-                const targetPosition = targetSection.offsetTop - headerHeight;
+                const targetPosition = targetSection.offsetTop - headerHeight - 20; // 20px extra de margen
                 window.scrollTo({
                     top: targetPosition,
                     behavior: 'smooth'
