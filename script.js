@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Configuración de traducciones
     const translations = {
         es: {
-            title: "CleanFloor Pro - Servicios de Mantenimiento y Limpieza de Pisos",
+            title: "SGM Cleaning Services - Servicios de Mantenimiento y Limpieza de Pisos",
             inicio: "Inicio",
             servicios: "Servicios",
             ofertas: "Ofertas",
@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', function() {
             contact: {
                 title: "Contacto",
                 phone: "Teléfono: (123) 456-7890",
-                email: "Email: info@cleanfloorpro.com",
+                email: "Email: info@sgmcleaning.com",
                 address: "Dirección: 123 Calle Principal, Ciudad"
             },
             links: "Enlaces Rápidos",
@@ -166,7 +166,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         },
         en: {
-            title: "CleanFloor Pro - Floor Maintenance and Cleaning Services",
+            title: "SGM Cleaning Services - Floor Maintenance and Cleaning Services",
             inicio: "Home",
             servicios: "Services",
             ofertas: "Offers",
@@ -222,7 +222,7 @@ document.addEventListener('DOMContentLoaded', function() {
             contact: {
                 title: "Contact",
                 phone: "Phone: (123) 456-7890",
-                email: "Email: info@cleanfloorpro.com",
+                email: "Email: info@sgmcleaning.com",
                 address: "Address: 123 Main Street, City"
             },
             links: "Quick Links",
@@ -360,7 +360,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Establecer contenido por defecto en español
-    updateContent('es');
+    updateContent('en');
 
     // Scroll suave para los enlaces de navegación
     const smoothScrollLinks = document.querySelectorAll('a[href^="#"]');
