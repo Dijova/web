@@ -300,7 +300,7 @@ document.addEventListener('DOMContentLoaded', function() {
         updateContent(savedLanguage);
     } else {
         // Si no hay selector, usar español por defecto
-        updateContent('es');
+        updateContent('en');
     }
 
     // Scroll suave para los enlaces de navegación
