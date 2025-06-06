@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         },
         en: {
-            title: "SGM Cleaning Services - Floor Maintenance and Cleaning Services",
+            title: "SGM Clean Solutions - Floor Maintenance and Cleaning Services",
             inicio: "Home",
             nosotros: "About Us",
             servicios: "Services",
@@ -157,7 +157,7 @@ document.addEventListener('DOMContentLoaded', function() {
             contact: {
                 title: "Contact",
                 phone: "Phone: +1(954) 245-1566",
-                email: "Email: info@sgmcleansolution.com",
+                email: "Email: info@sgmcleansolutions.com",
                 address: "Address: 86 Agawam St, Lowell Massachusetts"
             },
             links: "Quick Links",
