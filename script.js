@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function() {
             contact: {
                 title: "Contacto",
                 phone: "Teléfono: +1(954) 245-1566",
-                email: "Email: info@sgmcleansolution.com",
+                email: "Email: info@sgmcleansolutions.com",
                 address: "Dirección: 86 Agawam St, Lowell Massachusetts"
             },
             links: "Enlaces Rápidos",
