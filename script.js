@@ -51,6 +51,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 quoteForm.parentNode.insertBefore(messageEl, quoteForm.nextSibling);
             }
             
+            // Limpiar mensajes anteriores
+            messageEl.innerHTML = '';
+            
             // Enviar datos a Google Sheets
             fetch('https://script.google.com/macros/s/AKfycbxFkXgFlGUfAVALmkDtQfR5ZlGQ8SBx6e-010a7GV09QYdRcfPN6ktocBHYGEtJtdHg/exec', {
                 method: 'POST',
@@ -89,8 +92,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Configuración de traducciones
     const translations = {
         es: {
-            title: "SGM Cleaning Services - Servicios de Mantenimiento y Limpieza de Pisos",
+            title: "SGM Cleaning Services - Servicios de Mantenimiento y Limpieza",
             inicio: "Inicio",
+            nosotros: "Nosotros",
             servicios: "Servicios",
             ofertas: "Ofertas",
             testimonios: "Testimonios",
@@ -98,58 +102,19 @@ document.addEventListener('DOMContentLoaded', function() {
             heroTitle: "Expertos en Mantenimiento y Limpieza de Pisos",
             heroDescription: "Soluciones profesionales para todo tipo de superficies",
             heroButton: "Solicitar Cotización",
-            sectionServicesTitle: "Nuestros Servicios",
-            nosotros: "Sobre Nosotros",
-            services: [
-                {
-                    title: "Mantenimiento Especializado",
-                    description: "Cuidado experto para todo tipo de pisos"
-                },
-                {
-                    title: "Limpieza Profesional",
-                    description: "Dejamos sus pisos impecables y relucientes"
-                },
-                {
-                    title: "Aplicación de Pisos en Resina",
-                    description: "Soluciones duraderas y estéticas"
-                },
-                {
-                    title: "Limpieza Residencial",
-                    description: "Cuidamos de su hogar como si fuera el nuestro"
-                },
-                {
-                    title: "Limpieza Comercial",
-                    description: "Mantenemos su negocio impecable"
-                },
-                {
-                    title: "Limpieza Post Construcción",
-                    description: "Dejamos su espacio listo para estrenar"
-                }
-            ],
+            aboutTitle: "Sobre Nosotros",
+            servicesTitle: "Nuestros Servicios",
             offersTitle: "Ofertas Especiales",
-            offers: [
-                {
-                    title: "20% de descuento en su primera limpieza",
-                    description: "Válido para nuevos clientes en servicios residenciales"
-                },
-                {
-                    title: "Paquete de mantenimiento trimestral",
-                    description: "Ahorre un 15% al contratar nuestro plan trimestral"
-                },
-                {
-                    title: "Limpieza post construcción + sellado gratis",
-                    description: "Por tiempo limitado en proyectos mayores a 100m²"
-                }
-            ],
             testimonialsTitle: "Lo que dicen nuestros clientes",
+            quoteTitle: "Solicite una Cotización Gratuita",
             contact: {
                 title: "Contacto",
-                phone: "Teléfono: (123) 456-7890",
-                email: "Email: info@sgmcleaning.com",
-                address: "Dirección: 123 Calle Principal, Ciudad"
+                phone: "Teléfono: +1(954) 245-1566",
+                email: "Email: info@sgmcleansolution.com",
+                address: "Dirección: 86 Agawam St, Lowell Massachusetts"
             },
             links: "Enlaces Rápidos",
-            requestQuote: "Solicite una Cotización Gratuita",
+            follow: "Síguenos",
             formPlaceholders: {
                 name: "Nombre",
                 email: "Correo Electrónico",
@@ -157,6 +122,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 selectService: "Seleccione un servicio",
                 additionalDetails: "Detalles adicionales",
                 submit: "Enviar Solicitud"
+            },
+            serviceOptions: {
+                oficinas: "Limpieza de Oficinas",
+                pisos: "Limpieza Especializada de Pisos",
+                condominios: "Apartamentos y Condominios",
+                residencial: "Limpieza Residencial",
+                comercial: "Limpieza Comercial",
+                nieve: "Limpieza de Nieve"
             },
             formMessages: {
                 sending: "Enviando...",
@@ -168,6 +141,7 @@ document.addEventListener('DOMContentLoaded', function() {
         en: {
             title: "SGM Cleaning Services - Floor Maintenance and Cleaning Services",
             inicio: "Home",
+            nosotros: "About Us",
             servicios: "Services",
             ofertas: "Offers",
             testimonios: "Testimonials",
@@ -175,58 +149,19 @@ document.addEventListener('DOMContentLoaded', function() {
             heroTitle: "Experts in Floor Maintenance and Cleaning",
             heroDescription: "Professional solutions for all surfaces",
             heroButton: "Request a Quote",
-            sectionServicesTitle: "Our Services",
-            nosotros: "About Us",
-            services: [
-                {
-                    title: "Specialized Maintenance",
-                    description: "Expert care for all floor types"
-                },
-                {
-                    title: "Professional Cleaning",
-                    description: "We make your floors shine and sparkle"
-                },
-                {
-                    title: "Resin Floor Application",
-                    description: "Durable and aesthetic solutions"
-                },
-                {
-                    title: "Residential Cleaning",
-                    description: "We care for your home as if it were ours"
-                },
-                {
-                    title: "Commercial Cleaning",
-                    description: "Keeping your business spotless"
-                },
-                {
-                    title: "Post-Construction Cleaning",
-                    description: "We leave your space ready to showcase"
-                }
-            ],
+            aboutTitle: "About Us",
+            servicesTitle: "Our Services",
             offersTitle: "Special Offers",
-            offers: [
-                {
-                    title: "20% off your first cleaning",
-                    description: "Valid for new residential service clients"
-                },
-                {
-                    title: "Quarterly maintenance package",
-                    description: "Save 15% by subscribing to our quarterly plan"
-                },
-                {
-                    title: "Post-construction cleaning + free sealing",
-                    description: "Limited time only for projects over 100m²"
-                }
-            ],
             testimonialsTitle: "What Our Clients Say",
+            quoteTitle: "Request a Free Quote",
             contact: {
                 title: "Contact",
-                phone: "Phone: (123) 456-7890",
-                email: "Email: info@sgmcleaning.com",
-                address: "Address: 123 Main Street, City"
+                phone: "Phone: +1(954) 245-1566",
+                email: "Email: info@sgmcleansolution.com",
+                address: "Address: 86 Agawam St, Lowell Massachusetts"
             },
             links: "Quick Links",
-            requestQuote: "Request a Free Quote",
+            follow: "Follow Us",
             formPlaceholders: {
                 name: "Name",
                 email: "Email",
@@ -234,6 +169,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 selectService: "Select a service",
                 additionalDetails: "Additional details",
                 submit: "Submit Request"
+            },
+            serviceOptions: {
+                oficinas: "Office Cleaning",
+                pisos: "Specialized Floor Cleaning",
+                condominios: "Apartments and Condominiums",
+                residencial: "Residential Cleaning",
+                comercial: "Commercial Cleaning",
+                nieve: "Snow Cleaning"
             },
             formMessages: {
                 sending: "Sending...",
@@ -248,25 +191,25 @@ document.addEventListener('DOMContentLoaded', function() {
     const updateContent = (lang) => {
         const content = translations[lang];
         
-        // Actualizar textos de la interfaz según el idioma seleccionado
+        // Actualizar título de la página
         document.title = content.title;
         
         // Actualizar navegación
         const navLinks = {
             inicio: document.querySelector('a[href="#inicio"]'),
-            servicios: document.querySelector('a[href="#servicios"]'), // Volver a #servicios
+            nosotros: document.querySelector('a[href="#about-us"]'),
+            servicios: document.querySelector('a[href="#servicios"]'),
             ofertas: document.querySelector('a[href="#ofertas"]'),
             testimonios: document.querySelector('a[href="#testimonios"]'),
-            cotizacion: document.querySelector('a[href="#cotizacion"]'),
-            nosotros: document.querySelector('a[href="#about-us"]')
+            cotizacion: document.querySelector('a[href="#cotizacion"]')
         };
 
         if (navLinks.inicio) navLinks.inicio.textContent = content.inicio;
+        if (navLinks.nosotros) navLinks.nosotros.textContent = content.nosotros;
         if (navLinks.servicios) navLinks.servicios.textContent = content.servicios;
         if (navLinks.ofertas) navLinks.ofertas.textContent = content.ofertas;
         if (navLinks.testimonios) navLinks.testimonios.textContent = content.testimonios;
         if (navLinks.cotizacion) navLinks.cotizacion.textContent = content.cotizacion;
-        if (navLinks.nosotros) navLinks.nosotros.textContent = content.nosotros;
 
         // Actualizar hero section
         const heroTitle = document.querySelector('#hero h1');
@@ -277,77 +220,68 @@ document.addEventListener('DOMContentLoaded', function() {
         if (heroDesc) heroDesc.textContent = content.heroDescription;
         if (ctaButton) ctaButton.textContent = content.heroButton;
 
-        // Actualizar servicios
-        const servicesTitle = document.querySelector('#servicios h2'); // Volver a #servicios
-        if (servicesTitle) servicesTitle.textContent = content.sectionServicesTitle;
-        
-        const serviceItems = document.querySelectorAll('.service-item');
-        content.services.forEach((service, index) => {
-            if (serviceItems[index]) {
-                const serviceTitle = serviceItems[index].querySelector('h3');
-                const serviceDesc = serviceItems[index].querySelector('p');
-                if (serviceTitle) serviceTitle.textContent = service.title;
-                if (serviceDesc) serviceDesc.textContent = service.description;
-            }
-        });
+        // Actualizar títulos de secciones
+        const aboutTitle = document.querySelector('#about-us h2');
+        if (aboutTitle) aboutTitle.textContent = content.aboutTitle;
 
-        // Actualizar ofertas
+        const servicesTitle = document.querySelector('#servicios h2');
+        if (servicesTitle) servicesTitle.textContent = content.servicesTitle;
+
         const offersTitle = document.querySelector('#ofertas h2');
         if (offersTitle) offersTitle.textContent = content.offersTitle;
-        
-        const offerItems = document.querySelectorAll('.offer-item');
-        content.offers.forEach((offer, index) => {
-            if (offerItems[index]) {
-                const offerTitle = offerItems[index].querySelector('h3');
-                const offerDesc = offerItems[index].querySelector('p');
-                if (offerTitle) offerTitle.textContent = offer.title;
-                if (offerDesc) offerDesc.textContent = offer.description;
-            }
-        });
 
-        // Actualizar testimonios
         const testimonialsTitle = document.querySelector('#testimonios h2');
         if (testimonialsTitle) testimonialsTitle.textContent = content.testimonialsTitle;
 
-        // Actualizar cotización
         const quoteTitle = document.querySelector('#cotizacion h2');
-        if (quoteTitle) quoteTitle.textContent = content.requestQuote;
-        
+        if (quoteTitle) quoteTitle.textContent = content.quoteTitle;
+
+        // Actualizar formulario
         const form = document.querySelector('#quote-form');
         if (form) {
-            const inputs = form.querySelectorAll('input, textarea');
-            inputs.forEach(input => {
-                const fieldName = input.getAttribute('name');
-                if (fieldName && content.formPlaceholders[fieldName]) {
-                    input.setAttribute('placeholder', content.formPlaceholders[fieldName]);
-                }
-            });
-            
+            const nameInput = form.querySelector('input[name="name"]');
+            const emailInput = form.querySelector('input[name="email"]');
+            const phoneInput = form.querySelector('input[name="phone"]');
+            const messageTextarea = form.querySelector('textarea[name="message"]');
             const submitBtn = form.querySelector('button[type="submit"]');
+            
+            if (nameInput) nameInput.setAttribute('placeholder', content.formPlaceholders.name);
+            if (emailInput) emailInput.setAttribute('placeholder', content.formPlaceholders.email);
+            if (phoneInput) phoneInput.setAttribute('placeholder', content.formPlaceholders.phone);
+            if (messageTextarea) messageTextarea.setAttribute('placeholder', content.formPlaceholders.additionalDetails);
             if (submitBtn) submitBtn.textContent = content.formPlaceholders.submit;
             
-            const selectService = form.querySelector('select');
+            // Actualizar opciones del select
+            const selectService = form.querySelector('select[name="service"]');
             if (selectService) {
-                const firstOption = selectService.querySelector('option[value=""]');
-                if (firstOption) firstOption.textContent = content.formPlaceholders.selectService;
+                const options = selectService.querySelectorAll('option');
+                options[0].textContent = content.formPlaceholders.selectService; // Primera opción vacía
+                
+                // Actualizar opciones de servicios
+                Object.keys(content.serviceOptions).forEach((key, index) => {
+                    if (options[index + 1]) {
+                        options[index + 1].textContent = content.serviceOptions[key];
+                    }
+                });
             }
         }
 
-        // Actualizar footer si existe
+        // Actualizar footer
         const footerSections = document.querySelectorAll('.footer-section h3');
-        if (footerSections.length > 0) {
+        if (footerSections.length >= 3) {
             footerSections[0].textContent = content.contact.title;
-            if (footerSections.length > 1) {
-                footerSections[1].textContent = content.links;
-            }
+            footerSections[1].textContent = content.links;
+            footerSections[2].textContent = content.follow;
         }
 
-        const contactDetails = document.querySelectorAll('.footer-section p');
-        if (contactDetails.length >= 3) {
-            contactDetails[0].textContent = content.contact.phone;
-            contactDetails[1].textContent = content.contact.email;
-            contactDetails[2].textContent = content.contact.address;
-        }
+        // Actualizar información de contacto en footer
+        const footerPhone = document.getElementById('footer-phone');
+        const footerEmail = document.getElementById('footer-email');
+        const footerAddress = document.getElementById('footer-address');
+        
+        if (footerPhone) footerPhone.textContent = content.contact.phone;
+        if (footerEmail) footerEmail.textContent = content.contact.email;
+        if (footerAddress) footerAddress.textContent = content.contact.address;
     };
 
     // Configurar selector de idioma
@@ -356,11 +290,18 @@ document.addEventListener('DOMContentLoaded', function() {
         languageSelector.addEventListener('change', function(e) {
             const lang = e.target.value;
             updateContent(lang);
+            // Guardar la preferencia de idioma
+            localStorage.setItem('selectedLanguage', lang);
         });
+        
+        // Cargar idioma guardado o usar español por defecto
+        const savedLanguage = localStorage.getItem('selectedLanguage') || 'es';
+        languageSelector.value = savedLanguage;
+        updateContent(savedLanguage);
+    } else {
+        // Si no hay selector, usar español por defecto
+        updateContent('es');
     }
-
-    // Establecer contenido por defecto en español
-    updateContent('en');
 
     // Scroll suave para los enlaces de navegación
     const smoothScrollLinks = document.querySelectorAll('a[href^="#"]');
@@ -371,7 +312,6 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Manejar el enlace de inicio
             if (targetId === '#inicio') {
-                // Ir al inicio de la página (hero section)
                 window.scrollTo({
                     top: 0,
                     behavior: 'smooth'
@@ -379,22 +319,206 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
             
-            // Para la sección de servicios, usar el ID correcto
-            let targetSection;
-            if (targetId === '#servicios') {
-                targetSection = document.querySelector('#services');
-            } else {
-                targetSection = document.querySelector(targetId);
-            }
-            
-            if (targetSection) {
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                const offsetTop = targetElement.getBoundingClientRect().top + window.pageYOffset;
                 const headerHeight = document.querySelector('header').offsetHeight;
-                const targetPosition = targetSection.offsetTop - headerHeight - 20; // 20px extra de margen
+                
                 window.scrollTo({
-                    top: targetPosition,
+                    top: offsetTop - headerHeight - 20,
                     behavior: 'smooth'
                 });
             }
         });
     });
+
+    // Animación de entrada para elementos cuando aparecen en viewport
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-in');
+            }
+        });
+    }, observerOptions);
+
+    // Observar elementos animables
+    const animatedElements = document.querySelectorAll('.service-item, .offer-item, .testimonial-item, .about-text, .about-image');
+    animatedElements.forEach(el => {
+        observer.observe(el);
+    });
+
+    // Funcionalidad del slider de ofertas
+    const offerSlider = document.querySelector('.offer-slider');
+    if (offerSlider) {
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        offerSlider.addEventListener('mousedown', (e) => {
+            isDown = true;
+            offerSlider.classList.add('active');
+            startX = e.pageX - offerSlider.offsetLeft;
+            scrollLeft = offerSlider.scrollLeft;
+        });
+
+        offerSlider.addEventListener('mouseleave', () => {
+            isDown = false;
+            offerSlider.classList.remove('active');
+        });
+
+        offerSlider.addEventListener('mouseup', () => {
+            isDown = false;
+            offerSlider.classList.remove('active');
+        });
+
+        offerSlider.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - offerSlider.offsetLeft;
+            const walk = (x - startX) * 2;
+            offerSlider.scrollLeft = scrollLeft - walk;
+        });
+    }
+
+    // Validación adicional del formulario
+    const inputs = document.querySelectorAll('#quote-form input, #quote-form select, #quote-form textarea');
+    inputs.forEach(input => {
+        input.addEventListener('blur', function() {
+            validateField(this);
+        });
+
+        input.addEventListener('input', function() {
+            if (this.classList.contains('error')) {
+                validateField(this);
+            }
+        });
+    });
+
+    function validateField(field) {
+        const value = field.value.trim();
+        let isValid = true;
+        let errorMessage = '';
+
+        // Limpiar mensajes de error anteriores
+        field.classList.remove('error');
+        const existingError = field.parentNode.querySelector('.field-error');
+        if (existingError) {
+            existingError.remove();
+        }
+
+        // Validaciones específicas
+        switch (field.type) {
+            case 'email':
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (value && !emailRegex.test(value)) {
+                    isValid = false;
+                    errorMessage = 'Por favor, ingrese un email válido';
+                }
+                break;
+            case 'tel':
+                const phoneRegex = /^[\+]?[0-9\s\-\(\)]{10,}$/;
+                if (value && !phoneRegex.test(value)) {
+                    isValid = false;
+                    errorMessage = 'Por favor, ingrese un teléfono válido';
+                }
+                break;
+        }
+
+        // Validación de campos requeridos
+        if (field.hasAttribute('required') && !value) {
+            isValid = false;
+            errorMessage = 'Este campo es obligatorio';
+        }
+
+        // Mostrar error si no es válido
+        if (!isValid) {
+            field.classList.add('error');
+            const errorDiv = document.createElement('div');
+            errorDiv.className = 'field-error';
+            errorDiv.textContent = errorMessage;
+            field.parentNode.insertBefore(errorDiv, field.nextSibling);
+        }
+
+        return isValid;
+    }
+
+    // Efecto de header transparente al hacer scroll
+    let lastScrollTop = 0;
+    const header = document.querySelector('header');
+    
+    window.addEventListener('scroll', function() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+        if (scrollTop > 100) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+        
+        // Ocultar/mostrar header en scroll
+        if (scrollTop > lastScrollTop && scrollTop > 200) {
+            header.style.transform = 'translateY(-100%)';
+        } else {
+            header.style.transform = 'translateY(0)';
+        }
+        
+        lastScrollTop = scrollTop;
+    });
+
+    // Lazy loading para imágenes
+    const images = document.querySelectorAll('img[src]');
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.src; // Trigger loading
+                img.classList.add('loaded');
+                observer.unobserve(img);
+            }
+        });
+    });
+
+    images.forEach(img => {
+        imageObserver.observe(img);
+    });
+
+    // Manejar errores de carga de video
+    const heroVideo = document.querySelector('.hero-video');
+    if (heroVideo) {
+        heroVideo.addEventListener('error', function() {
+            console.warn('Error loading hero video');
+            // Fallback: mostrar imagen de fondo
+            const hero = document.querySelector('#hero');
+            hero.style.backgroundImage = 'url(assets/hero-fallback.jpg)';
+            hero.style.backgroundSize = 'cover';
+            hero.style.backgroundPosition = 'center';
+        });
+    }
+
+    // Función para reportar errores de JavaScript
+    window.addEventListener('error', function(e) {
+        console.error('JavaScript Error:', e.error);
+        // Aquí podrías enviar el error a un servicio de monitoreo
+    });
+
+    // Performance: Precargar recursos críticos
+    const criticalResources = [
+        'assets/logo.png',
+        'assets/aboutUs.jpg'
+    ];
+
+    criticalResources.forEach(resource => {
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.href = resource;
+        link.as = 'image';
+        document.head.appendChild(link);
+    });
+
+    console.log('SGM Cleaning Services - Script loaded successfully');
 });
