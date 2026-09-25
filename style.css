@@ -572,6 +572,16 @@ footer {
     color: #8dc63f;
 }
 
+.footer-section p a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section p a:hover {
+    color: #8dc63f;
+}
+
 .social-icons {
     display: flex;
     gap: 10px;
