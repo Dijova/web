@@ -225,7 +225,9 @@ document.addEventListener('DOMContentLoaded', function () {
         fields.forEach(field => {
             field.addEventListener('blur', () => validateField(field));
             field.addEventListener(field.type === 'checkbox' || field.tagName === 'SELECT' ? 'change' : 'input', () => {
-                if (field.classList.contains('error')) validateField(field);
+                // The message is checked while typing so a link warning does not
+                // appear on blur and shift the layout under the user's next click.
+                if (field.classList.contains('error') || field.tagName === 'TEXTAREA') validateField(field);
             });
         });
 
