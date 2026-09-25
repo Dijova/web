@@ -437,9 +437,77 @@ nav ul li a:hover {
     cursor: not-allowed;
 }
 
+/* Accessible labels that are only visible to screen readers */
+.visually-hidden {
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+}
+
+#quote-form textarea {
+    min-height: 120px;
+    resize: vertical;
+    font-family: inherit;
+}
+
+#quote-form .error {
+    border-color: #dc3545;
+}
+
+.field-error {
+    color: #ff8a95;
+    font-size: 14px;
+    margin-top: 6px;
+}
+
+/* Honeypot anti-spam field: hidden from humans */
+.hp-field {
+    position: absolute;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.consent-field label {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    font-size: 14px;
+    color: #dddddd;
+    cursor: pointer;
+}
+
+#quote-form .consent-field input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    padding: 0;
+    margin-top: 2px;
+    flex-shrink: 0;
+    accent-color: #8dc63f;
+}
+
+.privacy-note {
+    font-size: 13px;
+    color: #bbbbbb;
+    text-align: center;
+}
+
 /* Mensajes de formulario */
 #form-message {
-    margin-top: 20px;
+    max-width: 600px;
+    margin: 20px auto 0;
     text-align: center;
     font-weight: bold;
 }
@@ -501,6 +569,16 @@ footer {
 }
 
 .footer-section ul li a:hover {
+    color: #8dc63f;
+}
+
+.footer-section p a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section p a:hover {
     color: #8dc63f;
 }
 

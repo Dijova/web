@@ -3,48 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SGM Clean Solutions - Maintenance and Cleaning Services</title>
+    <!--
+        Content Security Policy: only allows scripts/connections from this site,
+        the quote-form backend (Google Apps Script), the Tawk.to chat widget and
+        the optional Cloudflare Turnstile anti-bot check. Blocks injected scripts,
+        clickjacking-style form hijacking and data exfiltration to unknown hosts.
+    -->
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self';
+        script-src 'self' https://*.tawk.to https://cdn.jsdelivr.net https://challenges.cloudflare.com;
+        style-src 'self' 'unsafe-inline' https://*.tawk.to https://fonts.googleapis.com;
+        font-src 'self' https://*.tawk.to https://fonts.gstatic.com;
+        img-src 'self' data: https://*.tawk.to https://cdn.jsdelivr.net https://tawk.link https://s3.amazonaws.com;
+        media-src 'self' https://*.tawk.to;
+        connect-src 'self' https://script.google.com https://script.googleusercontent.com https://*.tawk.to wss://*.tawk.to;
+        frame-src https://*.tawk.to https://challenges.cloudflare.com;
+        form-action 'self';
+        base-uri 'self';
+        object-src 'none';
+        upgrade-insecure-requests">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="description" content="SGM Clean Solutions: professional floor maintenance, commercial, residential and snow cleaning services in Lowell, Massachusetts." data-i18n-content="metaDescription">
+    <title>SGM Clean Solutions - Floor Maintenance and Cleaning Services</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preload" href="logo.png" as="image">
+    <script src="config.js" defer></script>
+    <script src="translations.js" defer></script>
     <script src="script.js" defer></script>
-    <!--Start of Tawk.to Script-->
-    <script type="text/javascript">
-        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-        (function(){
-            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-            s1.async=true;
-            s1.src='https://embed.tawk.to/6841f7fc98d2da1914a1a63e/1it0r1d94';
-            s1.charset='UTF-8';
-            s1.setAttribute('crossorigin','*');
-            s0.parentNode.insertBefore(s1,s0);
-        })();
-    </script>
-    <!--End of Tawk.to Script-->
+    <script src="tawk.js" defer></script>
 </head>
 
 <body class="dark-theme">
     <header>
         <div class="container">
             <div class="logo">
-                <img src="logo.png" alt="SGM Cleaning Services Logo">
+                <a href="#inicio"><img src="logo.png" alt="SGM Clean Solutions logo" data-i18n-alt="logoAlt"></a>
             </div>
-            
+
             <nav>
-                <button class="menu-toggle" id="menu-toggle">
+                <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open menu" aria-controls="nav-menu" aria-expanded="false" data-i18n-aria-label="menuToggle">
                     <span></span>
                     <span></span>
                     <span></span>
                 </button>
                 <ul id="nav-menu">
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#about-us">Nosotros</a></li>
-                    <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="#ofertas">Ofertas</a></li>
-                    <li><a href="#testimonios">Testimonios</a></li>
-                    <li><a href="#cotizacion">Cotización</a></li>
+                    <li><a href="#inicio" data-i18n="nav.home">Home</a></li>
+                    <li><a href="#about-us" data-i18n="nav.about">About Us</a></li>
+                    <li><a href="#servicios" data-i18n="nav.services">Services</a></li>
+                    <li><a href="#ofertas" data-i18n="nav.offers">Offers</a></li>
+                    <li><a href="#testimonios" data-i18n="nav.testimonials">Testimonials</a></li>
+                    <li><a href="#cotizacion" data-i18n="nav.quote">Quote</a></li>
                     <li class="language-item">
+                        <label for="language-selector" class="visually-hidden" data-i18n="languageLabel">Language</label>
                         <select id="language-selector">
-                            <option value="en">English</option>
-                            <option value="es" selected>Español</option>  
+                            <option value="en" selected>English</option>
+                            <option value="es">Español</option>
                         </select>
                     </li>
                 </ul>
@@ -56,30 +69,30 @@
         <section id="hero">
             <video autoplay muted loop playsinline class="hero-video">
                 <source src="banner.mp4" type="video/mp4">
-                Tu navegador no soporta el video HTML5.
+                <span data-i18n="hero.videoFallback">Your browser does not support HTML5 video.</span>
             </video>
             <div class="container hero-overlay">
-                <h1>Expertos en Mantenimiento y Limpieza de Pisos</h1>
-                <p>Soluciones profesionales para todo tipo de superficies</p>
-                <a href="#cotizacion" class="cta-button">Solicitar Cotización</a>
+                <h1 data-i18n="hero.title">Experts in Floor Maintenance and Cleaning</h1>
+                <p data-i18n="hero.subtitle">Professional solutions for every type of surface</p>
+                <a href="#cotizacion" class="cta-button" data-i18n="hero.cta">Request a Quote</a>
             </div>
         </section>
 
         <section id="about-us" class="about-section">
             <div class="container">
-                <h2>Sobre Nosotros</h2>
+                <h2 data-i18n="about.title">About Us</h2>
                 <div class="about-grid">
                     <div class="about-text">
-                        <p>At <strong>SGM Clean Solutions</strong> we are dedicated to offering high-quality cleaning and maintenance solutions for both residential and commercial spaces. Our commitment is excellence and sustainability.</p>
-                        <p>We use <strong>cutting-edge technology</strong> and certified products that ensure impeccable results and a healthier environment for our clients.</p>
+                        <p data-i18n-html="about.p1">At <strong>SGM Clean Solutions</strong> we are dedicated to offering high-quality cleaning and maintenance solutions for both residential and commercial spaces. Our commitment is excellence and sustainability.</p>
+                        <p data-i18n-html="about.p2">We use <strong>cutting-edge technology</strong> and certified products that ensure impeccable results and a healthier environment for our clients.</p>
                         <ul>
-                            <li>✅ Professional and trained team</li>
-                            <li>✅ Personalized services</li>
-                            <li>✅ Ecological commitment</li>
+                            <li data-i18n="about.item1">✅ Professional and trained team</li>
+                            <li data-i18n="about.item2">✅ Personalized services</li>
+                            <li data-i18n="about.item3">✅ Ecological commitment</li>
                         </ul>
                     </div>
                     <div class="about-image">
-                        <img src="aboutUs.jpg" alt="Nuestro equipo profesional de limpieza">
+                        <img src="aboutUs.jpg" alt="Our professional cleaning team" data-i18n-alt="about.imageAlt" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -87,60 +100,60 @@
 
         <section id="servicios">
             <div class="container">
-                <h2>Our Services</h2>
+                <h2 data-i18n="services.title">Our Services</h2>
                 <div class="service-grid">
                     <div class="service-item">
-                        <img src="Office C.jpg" alt="Limpieza de Oficinas">
-                        <h3>Office Cleaning Service</h3>
+                        <img src="Office C.jpg" alt="Office cleaning" data-i18n-alt="services.office.alt" loading="lazy">
+                        <h3 data-i18n="services.office.title">Office Cleaning Service</h3>
                         <ul>
-                            <li><a>🫧 Daily Cleaning</a></li>
-                            <li><a>🫧 Deep Disinfection</a></li>
-                            <li><a>🫧 Customized Solutions</a></li>
+                            <li><a data-i18n="services.office.i1">🫧 Daily Cleaning</a></li>
+                            <li><a data-i18n="services.office.i2">🫧 Deep Disinfection</a></li>
+                            <li><a data-i18n="services.office.i3">🫧 Customized Solutions</a></li>
                         </ul>
                     </div>
                     <div class="service-item">
-                        <img src="floorma.jpg" alt="Limpieza Especializada de Pisos">
-                        <h3>Specialized Floor Cleaning</h3>
+                        <img src="floorma.jpg" alt="Specialized floor cleaning" data-i18n-alt="services.floors.alt" loading="lazy">
+                        <h3 data-i18n="services.floors.title">Specialized Floor Cleaning</h3>
                         <ul>
-                            <li><a>🫧 Stripping and Waxing</a></li>
-                            <li><a>🫧 Deep Carpet Cleaning</a></li>
-                            <li><a>🫧 Surface Care and Maintenance</a></li>
+                            <li><a data-i18n="services.floors.i1">🫧 Stripping and Waxing</a></li>
+                            <li><a data-i18n="services.floors.i2">🫧 Deep Carpet Cleaning</a></li>
+                            <li><a data-i18n="services.floors.i3">🫧 Surface Care and Maintenance</a></li>
                         </ul>
                     </div>
                     <div class="service-item">
-                        <img src="condominium.jpg" alt="Soluciones para Apartamentos y Condominios">
-                        <h3>Apartment and Condominium Solutions</h3>
+                        <img src="condominium.jpg" alt="Apartment and condominium solutions" data-i18n-alt="services.condos.alt" loading="lazy">
+                        <h3 data-i18n="services.condos.title">Apartment and Condominium Solutions</h3>
                         <ul>
-                            <li><a>🫧 Apartment Cleaning</a></li>
-                            <li><a>🫧 Common Areas Maintenance</a></li>
-                            <li><a>🫧 Recreational Areas Maintenance</a></li>
+                            <li><a data-i18n="services.condos.i1">🫧 Apartment Cleaning</a></li>
+                            <li><a data-i18n="services.condos.i2">🫧 Common Areas Maintenance</a></li>
+                            <li><a data-i18n="services.condos.i3">🫧 Recreational Areas Maintenance</a></li>
                         </ul>
                     </div>
                     <div class="service-item">
-                        <img src="Residencial.jpg" alt="Limpieza Residencial">
-                        <h3>Residential Cleaning</h3>
+                        <img src="Residencial.jpg" alt="Residential cleaning" data-i18n-alt="services.residential.alt" loading="lazy">
+                        <h3 data-i18n="services.residential.title">Residential Cleaning</h3>
                         <ul>
-                            <li><a>🫧 Regular Cleaning</a></li>
-                            <li><a>🫧 Deep Cleaning</a></li>
-                            <li><a>🫧 Post-Construction or Post-Move Cleaning</a></li>
+                            <li><a data-i18n="services.residential.i1">🫧 Regular Cleaning</a></li>
+                            <li><a data-i18n="services.residential.i2">🫧 Deep Cleaning</a></li>
+                            <li><a data-i18n="services.residential.i3">🫧 Post-Construction or Post-Move Cleaning</a></li>
                         </ul>
                     </div>
                     <div class="service-item">
-                        <img src="comercial.jpg" alt="Limpieza Comercial">
-                        <h3>Commercial Cleaning</h3>
+                        <img src="comercial.jpg" alt="Commercial cleaning" data-i18n-alt="services.commercial.alt" loading="lazy">
+                        <h3 data-i18n="services.commercial.title">Commercial Cleaning</h3>
                         <ul>
-                            <li><a>🫧 Office Cleaning</a></li>
-                            <li><a>🫧 Industrial Cleaning</a></li>
-                            <li><a>🫧 Commercial Space Maintenance</a></li>
+                            <li><a data-i18n="services.commercial.i1">🫧 Office Cleaning</a></li>
+                            <li><a data-i18n="services.commercial.i2">🫧 Industrial Cleaning</a></li>
+                            <li><a data-i18n="services.commercial.i3">🫧 Commercial Space Maintenance</a></li>
                         </ul>
                     </div>
                     <div class="service-item">
-                        <img src="snow.jpg" alt="Limpieza de Nieve">
-                        <h3>Snow Cleaning</h3>
+                        <img src="snow.jpg" alt="Snow removal" data-i18n-alt="services.snow.alt" loading="lazy">
+                        <h3 data-i18n="services.snow.title">Snow Removal</h3>
                         <ul>
-                            <li><a>🫧 Roof & Gutter Snow Removal </a></li>
-                            <li><a>🫧 Ice Melt & Anti-Slip Treatment</a></li>
-                            <li><a>🫧 Driveway & Sidewalk Snow Removal</a></li>
+                            <li><a data-i18n="services.snow.i1">🫧 Roof &amp; Gutter Snow Removal</a></li>
+                            <li><a data-i18n="services.snow.i2">🫧 Ice Melt &amp; Anti-Slip Treatment</a></li>
+                            <li><a data-i18n="services.snow.i3">🫧 Driveway &amp; Sidewalk Snow Removal</a></li>
                         </ul>
                     </div>
                 </div>
@@ -149,20 +162,20 @@
 
         <section id="ofertas">
             <div class="container">
-                <h2>Special Offers</h2>
+                <h2 data-i18n="offers.title">Special Offers</h2>
                 <div class="offer-slider">
                     <div class="offer-item">
                         <div class="offer-icon">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                 <path d="M12 2L15.09 8.26L22 9L17 14L18.18 21L12 17.77L5.82 21L7 14L2 9L8.91 8.26L12 2Z" fill="#8dc63f" stroke="#8dc63f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </div>
-                        <h3>5% off your first cleaning</h3>
-                        <p>Valid for new residential service clients</p>
+                        <h3 data-i18n="offers.o1.title">5% off your first cleaning</h3>
+                        <p data-i18n="offers.o1.text">Valid for new residential service clients</p>
                     </div>
                     <div class="offer-item">
                         <div class="offer-icon">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                 <path d="M8 6H21" stroke="#8dc63f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 <path d="M8 12H21" stroke="#8dc63f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 <path d="M8 18H21" stroke="#8dc63f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -171,18 +184,18 @@
                                 <path d="M3 18H3.01" stroke="#8dc63f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </div>
-                        <h3>Quarterly maintenance package</h3>
-                        <p>Save 10% by subscribing to our quarterly plan</p>
+                        <h3 data-i18n="offers.o2.title">Quarterly maintenance package</h3>
+                        <p data-i18n="offers.o2.text">Save 10% by subscribing to our quarterly plan</p>
                     </div>
                     <div class="offer-item">
                         <div class="offer-icon">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                 <path d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" stroke="#8dc63f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 <path d="M9 22V12H15V22" stroke="#8dc63f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </div>
-                        <h3>Post-construction cleaning + free sealing</h3>
-                        <p>Limited time only for projects over 100m²</p>
+                        <h3 data-i18n="offers.o3.title">Post-construction cleaning + free sealing</h3>
+                        <p data-i18n="offers.o3.text">Limited time only for projects over 100 m²</p>
                     </div>
                 </div>
             </div>
@@ -190,19 +203,19 @@
 
         <section id="testimonios">
             <div class="container">
-                <h2>What Our Clients Say</h2>
+                <h2 data-i18n="testimonials.title">What Our Clients Say</h2>
                 <div class="testimonial-grid">
                     <div class="testimonial-item">
-                        <p>"Excellent service, they left my floors looking like new. Highly recommended."</p>
-                        <cite>- María G., Residential Client</cite>
+                        <p data-i18n="testimonials.t1.text">"Excellent service, they left my floors looking like new. Highly recommended."</p>
+                        <cite data-i18n="testimonials.t1.author">- María G., Residential Client</cite>
                     </div>
                     <div class="testimonial-item">
-                        <p>"SGM Clean Solutions transformed the look of our office. Professional and efficient."</p>
-                        <cite>- Juan R., Office Manager</cite>
+                        <p data-i18n="testimonials.t2.text">"SGM Clean Solutions transformed the look of our office. Professional and efficient."</p>
+                        <cite data-i18n="testimonials.t2.author">- Juan R., Office Manager</cite>
                     </div>
                     <div class="testimonial-item">
-                        <p>"Their post-construction cleaning exceeded our expectations. We will hire them again."</p>
-                        <cite>- Carlos M., Builder</cite>
+                        <p data-i18n="testimonials.t3.text">"Their post-construction cleaning exceeded our expectations. We will hire them again."</p>
+                        <cite data-i18n="testimonials.t3.author">- Carlos M., Builder</cite>
                     </div>
                 </div>
             </div>
@@ -210,24 +223,58 @@
 
         <section id="cotizacion">
             <div class="container">
-                <h2>Request a Free Quote</h2>
-                <form id="quote-form">
-                    <input type="text" name="name" placeholder="Nombre" required minlength="2" maxlength="100">
-                    <input type="email" name="email" placeholder="Correo Electrónico" required>
-                    <input type="tel" name="phone" placeholder="Teléfono" pattern="[0-9\+\-\s]*">
-                    <select name="service" required>
-                        <option value="">Seleccione un servicio</option>
-                        <option value="oficinas">Limpieza de Oficinas</option>
-                        <option value="pisos">Limpieza Especializada de Pisos</option>
-                        <option value="condominios">Apartamentos y Condominios</option>
-                        <option value="residencial">Limpieza Residencial</option>
-                        <option value="comercial">Limpieza Comercial</option>
-                        <option value="nieve">Limpieza de Nieve</option>
-                    </select>
-                    <textarea name="message" placeholder="Detalles adicionales" maxlength="500"></textarea>
-                    <button type="submit">Enviar Solicitud</button>
+                <h2 data-i18n="quote.title">Request a Free Quote</h2>
+                <form id="quote-form" novalidate autocomplete="on">
+                    <div class="form-field">
+                        <label for="qf-name" class="visually-hidden" data-i18n="form.name">Full name</label>
+                        <input id="qf-name" type="text" name="name" placeholder="Full name" data-i18n-placeholder="form.name" required minlength="2" maxlength="100" autocomplete="name">
+                    </div>
+                    <div class="form-field">
+                        <label for="qf-email" class="visually-hidden" data-i18n="form.email">Email</label>
+                        <input id="qf-email" type="email" name="email" placeholder="Email" data-i18n-placeholder="form.email" required maxlength="254" autocomplete="email">
+                    </div>
+                    <div class="form-field">
+                        <label for="qf-phone" class="visually-hidden" data-i18n="form.phone">Phone (optional)</label>
+                        <input id="qf-phone" type="tel" name="phone" placeholder="Phone (optional)" data-i18n-placeholder="form.phone" maxlength="25" autocomplete="tel">
+                    </div>
+                    <div class="form-field">
+                        <label for="qf-service" class="visually-hidden" data-i18n="form.service">Service</label>
+                        <select id="qf-service" name="service" required>
+                            <option value="" data-i18n="form.selectService">Select a service</option>
+                            <option value="office" data-i18n="form.services.office">Office Cleaning</option>
+                            <option value="floors" data-i18n="form.services.floors">Specialized Floor Cleaning</option>
+                            <option value="condos" data-i18n="form.services.condos">Apartments and Condominiums</option>
+                            <option value="residential" data-i18n="form.services.residential">Residential Cleaning</option>
+                            <option value="commercial" data-i18n="form.services.commercial">Commercial Cleaning</option>
+                            <option value="snow" data-i18n="form.services.snow">Snow Removal</option>
+                        </select>
+                    </div>
+                    <div class="form-field">
+                        <label for="qf-message" class="visually-hidden" data-i18n="form.message">Additional details</label>
+                        <textarea id="qf-message" name="message" placeholder="Additional details" data-i18n-placeholder="form.message" maxlength="1000"></textarea>
+                    </div>
+
+                    <!-- Anti-spam honeypot: hidden from humans, bots tend to fill it in -->
+                    <div class="hp-field" aria-hidden="true">
+                        <label for="qf-website">Leave this field empty</label>
+                        <input id="qf-website" type="text" name="website" tabindex="-1" autocomplete="off">
+                    </div>
+
+                    <div class="form-field consent-field">
+                        <label for="qf-consent">
+                            <input id="qf-consent" type="checkbox" name="consent" value="yes" required>
+                            <span data-i18n="form.consent">I agree that SGM Clean Solutions may store my information to respond to this quote request.</span>
+                        </label>
+                    </div>
+
+                    <!-- Cloudflare Turnstile widget is inserted here when enabled in config.js -->
+                    <div id="turnstile-container"></div>
+
+                    <button type="submit" data-i18n="form.submit">Submit Request</button>
+
+                    <p class="privacy-note" data-i18n="form.privacyNote">🔒 Your information is sent over an encrypted connection and used only to answer your request. We will never ask for passwords, bank details or payments through email or this form.</p>
                 </form>
-                <div id="form-message"></div>
+                <div id="form-message" role="status" aria-live="polite"></div>
             </div>
         </section>
     </main>
@@ -236,31 +283,31 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>Contacto</h3>
-                    <p id="footer-phone">Teléfono: +1(954) 245-1566</p>
-                    <p id="footer-email">Email: info@sgmcleansolutions.com</p>
-                    <p id="footer-address">Dirección: 86 Agawam St, Lowell Massachusetts</p>
+                    <h3 data-i18n="footer.contact">Contact</h3>
+                    <p><span data-i18n="footer.phone">Phone:</span> <a href="tel:+19542451566">+1 (954) 245-1566</a></p>
+                    <p><span data-i18n="footer.email">Email:</span> <a href="mailto:info@sgmcleansolutions.com">info@sgmcleansolutions.com</a></p>
+                    <p><span data-i18n="footer.address">Address:</span> 86 Agawam St, Lowell, Massachusetts</p>
                 </div>
                 <div class="footer-section">
-                    <h3>Enlaces Rápidos</h3>
+                    <h3 data-i18n="footer.links">Quick Links</h3>
                     <ul>
-                        <li><a href="#inicio">Home</a></li>
-                        <li><a href="#servicios">Services</a></li>
-                        <li><a href="#ofertas">Offers</a></li>
-                        <li><a href="#testimonios">Testimonials</a></li>
+                        <li><a href="#inicio" data-i18n="nav.home">Home</a></li>
+                        <li><a href="#servicios" data-i18n="nav.services">Services</a></li>
+                        <li><a href="#ofertas" data-i18n="nav.offers">Offers</a></li>
+                        <li><a href="#testimonios" data-i18n="nav.testimonials">Testimonials</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h3>Síguenos</h3>
+                    <h3 data-i18n="footer.follow">Follow Us</h3>
                     <div class="social-icons">
-                        <a href="#" class="social-icon">Facebook</a>
-                        <a href="#" class="social-icon">Instagram</a>
-                        <a href="#" class="social-icon">Twitter</a>
+                        <a href="#" class="social-icon" rel="noopener noreferrer">Facebook</a>
+                        <a href="#" class="social-icon" rel="noopener noreferrer">Instagram</a>
+                        <a href="#" class="social-icon" rel="noopener noreferrer">Twitter</a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 SGM Clean Solutions. Todos los derechos reservados.</p>
+                <p>&copy; <span id="current-year">2025</span> SGM Clean Solutions. <span data-i18n="footer.rights">All rights reserved.</span></p>
             </div>
         </div>
     </footer>
