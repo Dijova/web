@@ -12,8 +12,8 @@
 ## 1. Clonar e instalar
 
 ```bash
-git clone https://github.com/<tu-usuario>/<tu-repo>.git
-cd <tu-repo>/healthsupply-ai
+git clone https://github.com/Dijova/healthsupply-ai.git
+cd healthsupply-ai
 
 python -m venv .venv
 # Windows:            .venv\Scripts\activate
@@ -102,11 +102,12 @@ Sigue [07_tablero_power_bi.md](07_tablero_power_bi.md). Sin PostgreSQL: `python 
 
 ## 7. Publicar en GitHub (portafolio)
 
-1. Crea un repositorio público, por ejemplo `healthsupply-ai`.
-2. Sube el proyecto (`git add . && git commit -m "..." && git push`).
-3. Agrega capturas del tablero en `reports/figures/powerbi_*.png` y enlázalas en el README.
-4. En la descripción del repo usa: *"Analítica predictiva para inventarios en salud: pronóstico de demanda (scikit-learn), stock de seguridad y punto de reorden, modelo dimensional en PostgreSQL y tablero en Power BI."*
-5. Agrega *topics*: `data-science`, `forecasting`, `inventory-management`, `postgresql`, `power-bi`, `scikit-learn`, `healthcare`.
+El proyecto vive en https://github.com/Dijova/healthsupply-ai. Para mantenerlo como portafolio:
+
+1. Sube los cambios (`git add . && git commit -m "..." && git push`).
+2. Agrega capturas del tablero en `reports/figures/powerbi_*.png` y enlázalas en el README.
+3. En la descripción del repo usa: *"Analítica predictiva para inventarios en salud: pronóstico de demanda (scikit-learn), stock de seguridad y punto de reorden, modelo dimensional en PostgreSQL y tablero en Power BI."*
+4. Agrega *topics*: `data-science`, `forecasting`, `inventory-management`, `postgresql`, `power-bi`, `scikit-learn`, `healthcare`.
 
 ## Solución de problemas
 
