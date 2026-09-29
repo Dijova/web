@@ -1,0 +1,16 @@
+producto_id,producto_nombre,categoria,unidad_medida,costo_unitario,lead_time_dias,vida_util_dias,proveedor_id
+MED-001,Guantes de nitrilo talla M,Protección,Caja x 100,450,12,1095,PROV-001
+MED-002,Guantes de nitrilo talla L,Protección,Caja x 100,470,12,1095,PROV-001
+MED-003,Jeringa 5 ml,Dispositivos,Unidad,380,15,1825,PROV-002
+MED-004,Jeringa 10 ml,Dispositivos,Unidad,520,15,1825,PROV-002
+MED-005,Catéter intravenoso 20G,Dispositivos,Unidad,2800,20,1460,PROV-003
+MED-006,Catéter intravenoso 22G,Dispositivos,Unidad,2900,20,1460,PROV-003
+MED-007,Gasas estériles 10x10,Curación,Paquete x 10,650,10,1095,PROV-004
+MED-008,Apósito transparente,Curación,Unidad,1850,14,1095,PROV-004
+MED-009,Mascarilla quirúrgica,Protección,Caja x 50,1200,10,1095,PROV-001
+MED-010,Tubo de extracción EDTA,Laboratorio,Unidad,950,18,730,PROV-005
+MED-011,Tubo de extracción suero,Laboratorio,Unidad,900,18,730,PROV-005
+MED-012,Solución salina 500 ml,Soluciones,Bolsa,3500,18,730,PROV-003
+MED-013,Equipo de venoclisis,Dispositivos,Unidad,2100,16,1095,PROV-002
+MED-014,Alcohol antiséptico,Antisépticos,Frasco 500 ml,4200,12,730,PROV-004
+MED-015,Esparadrapo médico,Curación,Rollo,2600,11,1095,PROV-001

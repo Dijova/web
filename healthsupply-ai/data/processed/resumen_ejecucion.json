@@ -1,0 +1,32 @@
+{
+  "fecha_corte": "2025-12-31",
+  "mejor_modelo": "RandomForest",
+  "mejor_modelo_base": "promedio_dia_semana_8s",
+  "metricas_mejor": {
+    "MAE": 2.52,
+    "MAPE": 11.33,
+    "WAPE": 10.88,
+    "Sesgo_pct": 0.82
+  },
+  "metricas_mejor_base": {
+    "MAE": 3.34,
+    "MAPE": 15.58,
+    "WAPE": 14.43,
+    "Sesgo_pct": 2.42
+  },
+  "mejora_wape_pct": 24.6,
+  "reglas_calidad": {
+    "OK": 44,
+    "ADVERTENCIA": 2
+  },
+  "estados_inventario": {
+    "SOBRESTOCK": 75
+  },
+  "valor_exceso_cop": 193079010.0,
+  "alertas": {
+    "SOBRESTOCK": 75,
+    "VENCIMIENTO": 75
+  },
+  "valor_en_riesgo_vencimiento_cop": 105087020.0,
+  "segundos": 123.2
+}

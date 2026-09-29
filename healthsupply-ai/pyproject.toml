@@ -1,0 +1,11 @@
+[project]
+name = "healthsupply-ai"
+version = "1.0.0"
+description = "Analítica predictiva para inventarios en salud"
+requires-python = ">=3.10"
+
+[tool.ruff]
+line-length = 120
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

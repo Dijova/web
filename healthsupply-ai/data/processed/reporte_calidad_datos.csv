@@ -1,0 +1,47 @@
+tabla,regla,dimension,severidad,registros_evaluados,registros_fallidos,pct_fallidos,estado,descripcion
+dim_fecha,sin_valores_nulos,Completitud,ERROR,10960,0,0.0,OK,Ninguna celda de la tabla debe estar vacía.
+dim_producto,sin_valores_nulos,Completitud,ERROR,120,0,0.0,OK,Ninguna celda de la tabla debe estar vacía.
+dim_proveedor,sin_valores_nulos,Completitud,ERROR,15,0,0.0,OK,Ninguna celda de la tabla debe estar vacía.
+dim_ubicacion,sin_valores_nulos,Completitud,ERROR,20,0,0.0,OK,Ninguna celda de la tabla debe estar vacía.
+fact_demanda,sin_valores_nulos,Completitud,ERROR,328800,0,0.0,OK,Ninguna celda de la tabla debe estar vacía.
+fact_inventario,sin_valores_nulos,Completitud,ERROR,739800,0,0.0,OK,Ninguna celda de la tabla debe estar vacía.
+fact_compras,sin_valores_nulos,Completitud,ERROR,24000,0,0.0,OK,Ninguna celda de la tabla debe estar vacía.
+fact_lotes,sin_valores_nulos,Completitud,ERROR,1575,0,0.0,OK,Ninguna celda de la tabla debe estar vacía.
+fact_demanda,panel_completo_fecha_producto_ubicacion,Completitud,ERROR,82200,0,0.0,OK,"Debe existir un registro por cada día, producto y ubicación."
+fact_inventario,panel_completo_fecha_producto_ubicacion,Completitud,ERROR,82200,0,0.0,OK,"Debe existir un registro por cada día, producto y ubicación."
+dim_fecha,calendario_sin_huecos,Completitud,ERROR,1096,0,0.0,OK,La dimensión fecha debe contener todos los días del rango.
+dim_fecha,llave_unica(fecha),Unicidad,ERROR,1096,0,0.0,OK,La llave de negocio no debe repetirse.
+dim_producto,llave_unica(producto_id),Unicidad,ERROR,15,0,0.0,OK,La llave de negocio no debe repetirse.
+dim_proveedor,llave_unica(proveedor_id),Unicidad,ERROR,5,0,0.0,OK,La llave de negocio no debe repetirse.
+dim_ubicacion,llave_unica(ubicacion_id),Unicidad,ERROR,5,0,0.0,OK,La llave de negocio no debe repetirse.
+fact_demanda,"llave_unica(fecha, producto_id, ubicacion_id)",Unicidad,ERROR,82200,0,0.0,OK,La llave de negocio no debe repetirse.
+fact_inventario,"llave_unica(fecha, producto_id, ubicacion_id)",Unicidad,ERROR,82200,0,0.0,OK,La llave de negocio no debe repetirse.
+fact_lotes,llave_unica(lote_id),Unicidad,ERROR,225,0,0.0,OK,La llave de negocio no debe repetirse.
+fact_demanda,cantidades_no_negativas,Validez,ERROR,82200,0,0.0,OK,Columnas ['unidades_demandadas'] deben ser >= 0.
+fact_inventario,cantidades_no_negativas,Validez,ERROR,82200,0,0.0,OK,"Columnas ['inventario_inicial', 'entradas', 'salidas', 'inventario_final', 'inventario_reservado', 'inventario_disponible'] deben ser >= 0."
+fact_compras,cantidades_no_negativas,Validez,ERROR,3000,0,0.0,OK,"Columnas ['cantidad', 'costo_unitario', 'valor_compra'] deben ser >= 0."
+fact_lotes,cantidades_no_negativas,Validez,ERROR,225,0,0.0,OK,"Columnas ['cantidad_inicial', 'cantidad_disponible'] deben ser >= 0."
+dim_producto,cantidades_no_negativas,Validez,ERROR,15,0,0.0,OK,"Columnas ['costo_unitario', 'lead_time_dias', 'vida_util_dias'] deben ser >= 0."
+fact_demanda,fecha_en_calendario,Validez,ERROR,82200,0,0.0,OK,Toda fecha de hechos debe existir en dim_fecha.
+fact_inventario,fecha_en_calendario,Validez,ERROR,82200,0,0.0,OK,Toda fecha de hechos debe existir en dim_fecha.
+fact_inventario,balance_inicial_entradas_salidas_final,Consistencia,ADVERTENCIA,82200,46,0.056,ADVERTENCIA,"Si falla, las salidas registradas superan el stock: son días de QUIEBRE donde la demanda no pudo atenderse (demanda insatisfecha)."
+fact_inventario,disponible_igual_final_menos_reservado,Consistencia,ERROR,82200,0,0.0,OK,inventario_disponible = inventario_final - inventario_reservado.
+fact_inventario,continuidad_final_ayer_igual_inicial_hoy,Consistencia,ERROR,82125,0,0.0,OK,El inventario inicial de un día debe ser el final del día anterior.
+fact_inventario,salidas_igual_demanda,Consistencia,ERROR,82200,0,0.0,OK,Las salidas del inventario deben igualar la demanda registrada.
+fact_compras,valor_igual_cantidad_por_costo,Consistencia,ERROR,3000,0,0.0,OK,valor_compra = cantidad x costo_unitario.
+fact_compras,recepcion_posterior_a_pedido,Consistencia,ERROR,3000,0,0.0,OK,Un pedido no puede recibirse antes de ser colocado.
+fact_inventario,entradas_conciliadas_con_compras,Consistencia,ERROR,2925,0,0.0,OK,Cada entrada al inventario debe coincidir con la cantidad recibida en compras.
+fact_compras,costo_igual_maestro_producto,Consistencia,ADVERTENCIA,3000,0,0.0,OK,El costo pagado debería coincidir con el costo del maestro de productos.
+fact_lotes,vencimiento_posterior_a_ingreso,Consistencia,ERROR,225,0,0.0,OK,Un lote no puede vencer antes de ingresar.
+fact_lotes,disponible_menor_o_igual_inicial,Consistencia,ERROR,225,0,0.0,OK,Un lote no puede tener más unidades disponibles que las que ingresaron.
+fact_lotes,lotes_vencidos_con_existencias,Consistencia,ADVERTENCIA,225,71,31.5556,ADVERTENCIA,"Lotes ya vencidos a la fecha de corte que siguen con unidades: no es un error del dato, es un hallazgo (hay que darlos de baja)."
+fact_demanda,fk_producto_id_existe,Integridad referencial,ERROR,82200,0,0.0,OK,Cada producto_id debe existir en su tabla dimensión.
+fact_demanda,fk_ubicacion_id_existe,Integridad referencial,ERROR,82200,0,0.0,OK,Cada ubicacion_id debe existir en su tabla dimensión.
+fact_inventario,fk_producto_id_existe,Integridad referencial,ERROR,82200,0,0.0,OK,Cada producto_id debe existir en su tabla dimensión.
+fact_inventario,fk_ubicacion_id_existe,Integridad referencial,ERROR,82200,0,0.0,OK,Cada ubicacion_id debe existir en su tabla dimensión.
+fact_compras,fk_producto_id_existe,Integridad referencial,ERROR,3000,0,0.0,OK,Cada producto_id debe existir en su tabla dimensión.
+fact_compras,fk_ubicacion_id_existe,Integridad referencial,ERROR,3000,0,0.0,OK,Cada ubicacion_id debe existir en su tabla dimensión.
+fact_compras,fk_proveedor_id_existe,Integridad referencial,ERROR,3000,0,0.0,OK,Cada proveedor_id debe existir en su tabla dimensión.
+fact_lotes,fk_producto_id_existe,Integridad referencial,ERROR,225,0,0.0,OK,Cada producto_id debe existir en su tabla dimensión.
+fact_lotes,fk_ubicacion_id_existe,Integridad referencial,ERROR,225,0,0.0,OK,Cada ubicacion_id debe existir en su tabla dimensión.
+dim_producto,fk_proveedor_id_existe,Integridad referencial,ERROR,15,0,0.0,OK,Cada proveedor_id debe existir en su tabla dimensión.

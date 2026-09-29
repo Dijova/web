@@ -1,0 +1,20 @@
+# Entornos y cachés de Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Exportación para Power BI (se regenera con scripts/exportar_powerbi.py)
+data/powerbi/
+
+# Modelos serializados (pesados; se regeneran con el pipeline)
+models/
+
+# Sistema operativo / editores
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

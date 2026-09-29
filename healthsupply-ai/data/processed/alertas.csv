@@ -1,0 +1,151 @@
+alerta_id,fecha_corte,producto_id,ubicacion_id,producto_nombre,lote_id,tipo_alerta,severidad,unidades,valor,mensaje
+1,2025-12-31,MED-014,LOC-004,Alcohol antiséptico,LOT-00207,VENCIMIENTO,CRITICA,1365,5733000.0,Lote vencido hace 241 días con 1365 u. Retirar y dar de baja.
+2,2025-12-31,MED-014,LOC-002,Alcohol antiséptico,LOT-00200,VENCIMIENTO,CRITICA,1296,5443200.0,Lote vencido hace 378 días con 1296 u. Retirar y dar de baja.
+3,2025-12-31,MED-012,LOC-005,Solución salina 500 ml,LOT-00180,VENCIMIENTO,CRITICA,1445,5057500.0,Lote vencido hace 233 días con 1445 u. Retirar y dar de baja.
+4,2025-12-31,MED-012,LOC-002,Solución salina 500 ml,LOT-00169,VENCIMIENTO,CRITICA,1426,4991000.0,Lote vencido hace 76 días con 1426 u. Retirar y dar de baja.
+5,2025-12-31,MED-015,LOC-003,Esparadrapo médico,LOT-00219,VENCIMIENTO,CRITICA,1682,4373200.0,Lote vencido hace 11 días con 1682 u. Retirar y dar de baja.
+6,2025-12-31,MED-012,LOC-003,Solución salina 500 ml,LOT-00172,VENCIMIENTO,CRITICA,1204,4214000.0,Lote vencido hace 711 días con 1204 u. Retirar y dar de baja.
+7,2025-12-31,MED-012,LOC-004,Solución salina 500 ml,LOT-00175,VENCIMIENTO,CRITICA,1114,3899000.0,Lote vencido hace 951 días con 1114 u. Retirar y dar de baja.
+8,2025-12-31,MED-013,LOC-001,Equipo de venoclisis,LOT-00181,VENCIMIENTO,CRITICA,1813,3807300.0,Lote vencido hace 848 días con 1813 u. Retirar y dar de baja.
+9,2025-12-31,MED-014,LOC-005,Alcohol antiséptico,LOT-00208,VENCIMIENTO,CRITICA,889,3733800.0,Lote vencido hace 153 días con 889 u. Retirar y dar de baja.
+10,2025-12-31,MED-015,LOC-005,Esparadrapo médico,LOT-00224,VENCIMIENTO,CRITICA,1338,3478800.0,Lote vencido hace 45 días con 1338 u. Retirar y dar de baja.
+11,2025-12-31,MED-014,LOC-002,Alcohol antiséptico,LOT-00201,VENCIMIENTO,CRITICA,827,3473400.0,Lote vencido hace 504 días con 827 u. Retirar y dar de baja.
+12,2025-12-31,MED-013,LOC-002,Equipo de venoclisis,LOT-00185,VENCIMIENTO,CRITICA,1422,2986200.0,Lote vencido hace 220 días con 1422 u. Retirar y dar de baja.
+13,2025-12-31,MED-013,LOC-004,Equipo de venoclisis,LOT-00191,VENCIMIENTO,CRITICA,1367,2870700.0,Lote vencido hace 184 días con 1367 u. Retirar y dar de baja.
+14,2025-12-31,MED-009,LOC-005,Mascarilla quirúrgica,LOT-00135,VENCIMIENTO,CRITICA,2253,2703600.0,Lote vencido hace 140 días con 2253 u. Retirar y dar de baja.
+15,2025-12-31,MED-015,LOC-003,Esparadrapo médico,LOT-00217,VENCIMIENTO,CRITICA,866,2251600.0,Lote vencido hace 16 días con 866 u. Retirar y dar de baja.
+16,2025-12-31,MED-008,LOC-005,Apósito transparente,LOT-00119,VENCIMIENTO,CRITICA,1162,2149700.0,Lote vencido hace 120 días con 1162 u. Retirar y dar de baja.
+17,2025-12-31,MED-015,LOC-004,Esparadrapo médico,LOT-00222,VENCIMIENTO,CRITICA,791,2056600.0,Lote vencido hace 6 días con 791 u. Retirar y dar de baja.
+18,2025-12-31,MED-008,LOC-003,Apósito transparente,LOT-00112,VENCIMIENTO,CRITICA,1061,1962850.0,Lote vencido hace 964 días con 1061 u. Retirar y dar de baja.
+19,2025-12-31,MED-012,LOC-003,Solución salina 500 ml,LOT-00173,VENCIMIENTO,CRITICA,521,1823500.0,Lote vencido hace 99 días con 521 u. Retirar y dar de baja.
+20,2025-12-31,MED-008,LOC-002,Apósito transparente,LOT-00109,VENCIMIENTO,CRITICA,927,1714950.0,Lote vencido hace 9 días con 927 u. Retirar y dar de baja.
+21,2025-12-31,MED-012,LOC-003,Solución salina 500 ml,LOT-00174,VENCIMIENTO,CRITICA,461,1613500.0,Lote vencido hace 292 días con 461 u. Retirar y dar de baja.
+22,2025-12-31,MED-014,LOC-003,Alcohol antiséptico,LOT-00203,VENCIMIENTO,CRITICA,370,1554000.0,Lote vencido hace 165 días con 370 u. Retirar y dar de baja.
+23,2025-12-31,MED-013,LOC-003,Equipo de venoclisis,LOT-00187,VENCIMIENTO,CRITICA,685,1438500.0,Lote vencido hace 76 días con 685 u. Retirar y dar de baja.
+24,2025-12-31,MED-012,LOC-004,Solución salina 500 ml,LOT-00177,VENCIMIENTO,CRITICA,410,1435000.0,Lote vencido hace 153 días con 410 u. Retirar y dar de baja.
+25,2025-12-31,MED-011,LOC-004,Tubo de extracción suero,LOT-00161,VENCIMIENTO,CRITICA,1541,1386900.0,Lote vencido hace 314 días con 1541 u. Retirar y dar de baja.
+26,2025-12-31,MED-012,LOC-002,Solución salina 500 ml,LOT-00171,VENCIMIENTO,CRITICA,389,1361500.0,Lote vencido hace 190 días con 389 u. Retirar y dar de baja.
+27,2025-12-31,MED-009,LOC-003,Mascarilla quirúrgica,LOT-00128,VENCIMIENTO,CRITICA,1103,1323600.0,Lote vencido hace 262 días con 1103 u. Retirar y dar de baja.
+28,2025-12-31,MED-013,LOC-003,Equipo de venoclisis,LOT-00189,VENCIMIENTO,CRITICA,623,1308300.0,Lote vencido hace 6 días con 623 u. Retirar y dar de baja.
+29,2025-12-31,MED-006,LOC-004,Catéter intravenoso 22G,LOT-00085,VENCIMIENTO,CRITICA,449,1302100.0,Lote vencido hace 713 días con 449 u. Retirar y dar de baja.
+30,2025-12-31,MED-014,LOC-003,Alcohol antiséptico,LOT-00202,VENCIMIENTO,CRITICA,298,1251600.0,Lote vencido hace 642 días con 298 u. Retirar y dar de baja.
+31,2025-12-31,MED-013,LOC-005,Equipo de venoclisis,LOT-00195,VENCIMIENTO,CRITICA,584,1226400.0,Lote vencido hace 178 días con 584 u. Retirar y dar de baja.
+32,2025-12-31,MED-006,LOC-003,Catéter intravenoso 22G,LOT-00082,VENCIMIENTO,CRITICA,386,1119400.0,Lote vencido hace 377 días con 386 u. Retirar y dar de baja.
+33,2025-12-31,MED-010,LOC-003,Tubo de extracción EDTA,LOT-00143,VENCIMIENTO,CRITICA,1015,964250.0,Lote vencido hace 566 días con 1015 u. Retirar y dar de baja.
+34,2025-12-31,MED-011,LOC-005,Tubo de extracción suero,LOT-00165,VENCIMIENTO,CRITICA,1036,932400.0,Lote vencido hace 69 días con 1036 u. Retirar y dar de baja.
+35,2025-12-31,MED-007,LOC-002,Gasas estériles 10x10,LOT-00096,VENCIMIENTO,CRITICA,1389,902850.0,Lote vencido hace 349 días con 1389 u. Retirar y dar de baja.
+36,2025-12-31,MED-012,LOC-001,Solución salina 500 ml,LOT-00167,VENCIMIENTO,CRITICA,251,878500.0,Lote vencido hace 583 días con 251 u. Retirar y dar de baja.
+37,2025-12-31,MED-009,LOC-001,Mascarilla quirúrgica,LOT-00122,VENCIMIENTO,CRITICA,705,846000.0,Lote vencido hace 114 días con 705 u. Retirar y dar de baja.
+38,2025-12-31,MED-007,LOC-005,Gasas estériles 10x10,LOT-00104,VENCIMIENTO,CRITICA,1251,813150.0,Lote vencido hace 298 días con 1251 u. Retirar y dar de baja.
+39,2025-12-31,MED-010,LOC-005,Tubo de extracción EDTA,LOT-00150,VENCIMIENTO,CRITICA,809,768550.0,Lote vencido hace 131 días con 809 u. Retirar y dar de baja.
+40,2025-12-31,MED-011,LOC-005,Tubo de extracción suero,LOT-00164,VENCIMIENTO,CRITICA,840,756000.0,Lote vencido hace 558 días con 840 u. Retirar y dar de baja.
+41,2025-12-31,MED-008,LOC-004,Apósito transparente,LOT-00115,VENCIMIENTO,CRITICA,398,736300.0,Lote vencido hace 377 días con 398 u. Retirar y dar de baja.
+42,2025-12-31,MED-007,LOC-001,Gasas estériles 10x10,LOT-00091,VENCIMIENTO,CRITICA,1103,716950.0,Lote vencido hace 958 días con 1103 u. Retirar y dar de baja.
+43,2025-12-31,MED-008,LOC-003,Apósito transparente,LOT-00113,VENCIMIENTO,CRITICA,349,645650.0,Lote vencido hace 5 días con 349 u. Retirar y dar de baja.
+44,2025-12-31,MED-011,LOC-002,Tubo de extracción suero,LOT-00154,VENCIMIENTO,CRITICA,707,636300.0,Lote vencido hace 397 días con 707 u. Retirar y dar de baja.
+45,2025-12-31,MED-012,LOC-005,Solución salina 500 ml,LOT-00179,VENCIMIENTO,CRITICA,179,626500.0,Lote vencido hace 15 días con 179 u. Retirar y dar de baja.
+46,2025-12-31,MED-010,LOC-001,Tubo de extracción EDTA,LOT-00137,VENCIMIENTO,CRITICA,649,616550.0,Lote vencido hace 85 días con 649 u. Retirar y dar de baja.
+47,2025-12-31,MED-010,LOC-004,Tubo de extracción EDTA,LOT-00146,VENCIMIENTO,CRITICA,633,601350.0,Lote vencido hace 196 días con 633 u. Retirar y dar de baja.
+48,2025-12-31,MED-002,LOC-001,Guantes de nitrilo talla L,LOT-00018,VENCIMIENTO,CRITICA,1276,599720.0,Lote vencido hace 186 días con 1276 u. Retirar y dar de baja.
+49,2025-12-31,MED-013,LOC-005,Equipo de venoclisis,LOT-00193,VENCIMIENTO,CRITICA,278,583800.0,Lote vencido hace 104 días con 278 u. Retirar y dar de baja.
+50,2025-12-31,MED-011,LOC-001,Tubo de extracción suero,LOT-00151,VENCIMIENTO,CRITICA,644,579600.0,Lote vencido hace 895 días con 644 u. Retirar y dar de baja.
+51,2025-12-31,MED-009,LOC-002,Mascarilla quirúrgica,LOT-00124,VENCIMIENTO,CRITICA,447,536400.0,Lote vencido hace 401 días con 447 u. Retirar y dar de baja.
+52,2025-12-31,MED-001,LOC-003,Guantes de nitrilo talla M,LOT-00007,VENCIMIENTO,CRITICA,1022,459900.0,Lote vencido hace 72 días con 1022 u. Retirar y dar de baja.
+53,2025-12-31,MED-010,LOC-003,Tubo de extracción EDTA,LOT-00144,VENCIMIENTO,CRITICA,484,459800.0,Lote vencido hace 70 días con 484 u. Retirar y dar de baja.
+54,2025-12-31,MED-003,LOC-004,Jeringa 5 ml,LOT-00040,VENCIMIENTO,CRITICA,1055,400900.0,Lote vencido hace 429 días con 1055 u. Retirar y dar de baja.
+55,2025-12-31,MED-010,LOC-005,Tubo de extracción EDTA,LOT-00149,VENCIMIENTO,CRITICA,392,372400.0,Lote vencido hace 485 días con 392 u. Retirar y dar de baja.
+56,2025-12-31,MED-010,LOC-002,Tubo de extracción EDTA,LOT-00141,VENCIMIENTO,CRITICA,313,297350.0,Lote vencido hace 251 días con 313 u. Retirar y dar de baja.
+57,2025-12-31,MED-002,LOC-004,Guantes de nitrilo talla L,LOT-00025,VENCIMIENTO,CRITICA,558,262260.0,Lote vencido hace 239 días con 558 u. Retirar y dar de baja.
+58,2025-12-31,MED-011,LOC-005,Tubo de extracción suero,LOT-00163,VENCIMIENTO,CRITICA,274,246600.0,Lote vencido hace 253 días con 274 u. Retirar y dar de baja.
+59,2025-12-31,MED-011,LOC-004,Tubo de extracción suero,LOT-00162,VENCIMIENTO,CRITICA,273,245700.0,Lote vencido hace 240 días con 273 u. Retirar y dar de baja.
+60,2025-12-31,MED-002,LOC-002,Guantes de nitrilo talla L,LOT-00019,VENCIMIENTO,CRITICA,482,226540.0,Lote vencido hace 988 días con 482 u. Retirar y dar de baja.
+61,2025-12-31,MED-011,LOC-003,Tubo de extracción suero,LOT-00157,VENCIMIENTO,CRITICA,246,221400.0,Lote vencido hace 650 días con 246 u. Retirar y dar de baja.
+62,2025-12-31,MED-011,LOC-001,Tubo de extracción suero,LOT-00152,VENCIMIENTO,CRITICA,240,216000.0,Lote vencido hace 218 días con 240 u. Retirar y dar de baja.
+63,2025-12-31,MED-011,LOC-003,Tubo de extracción suero,LOT-00158,VENCIMIENTO,CRITICA,228,205200.0,Lote vencido hace 164 días con 228 u. Retirar y dar de baja.
+64,2025-12-31,MED-010,LOC-004,Tubo de extracción EDTA,LOT-00145,VENCIMIENTO,CRITICA,208,197600.0,Lote vencido hace 856 días con 208 u. Retirar y dar de baja.
+65,2025-12-31,MED-001,LOC-003,Guantes de nitrilo talla M,LOT-00008,VENCIMIENTO,CRITICA,432,194400.0,Lote vencido hace 222 días con 432 u. Retirar y dar de baja.
+66,2025-12-31,MED-010,LOC-005,Tubo de extracción EDTA,LOT-00148,VENCIMIENTO,CRITICA,128,121600.0,Lote vencido hace 604 días con 128 u. Retirar y dar de baja.
+67,2025-12-31,MED-001,LOC-005,Guantes de nitrilo talla M,LOT-00013,VENCIMIENTO,CRITICA,242,108900.0,Lote vencido hace 426 días con 242 u. Retirar y dar de baja.
+68,2025-12-31,MED-002,LOC-001,Guantes de nitrilo talla L,LOT-00017,VENCIMIENTO,CRITICA,223,104810.0,Lote vencido hace 121 días con 223 u. Retirar y dar de baja.
+69,2025-12-31,MED-011,LOC-002,Tubo de extracción suero,LOT-00156,VENCIMIENTO,CRITICA,115,103500.0,Lote vencido hace 92 días con 115 u. Retirar y dar de baja.
+70,2025-12-31,MED-001,LOC-005,Guantes de nitrilo talla M,LOT-00014,VENCIMIENTO,CRITICA,223,100350.0,Lote vencido hace 137 días con 223 u. Retirar y dar de baja.
+71,2025-12-31,MED-003,LOC-002,Jeringa 5 ml,LOT-00034,VENCIMIENTO,CRITICA,168,63840.0,Lote vencido hace 589 días con 168 u. Retirar y dar de baja.
+72,2025-12-31,MED-015,LOC-001,Esparadrapo médico,LOT-00211,VENCIMIENTO,ALTA,246,639600.0,Vence en 49 días; al ritmo actual quedarían 246 u sin consumir. Priorizar despacho o trasladar.
+73,2025-12-31,MED-008,LOC-005,Apósito transparente,LOT-00118,VENCIMIENTO,ALTA,267,493950.0,Vence en 51 días; al ritmo actual quedarían 267 u sin consumir. Priorizar despacho o trasladar.
+74,2025-12-31,MED-011,LOC-002,Tubo de extracción suero,LOT-00155,VENCIMIENTO,ALTA,257,231300.0,Vence en 32 días; al ritmo actual quedarían 257 u sin consumir. Priorizar despacho o trasladar.
+75,2025-12-31,MED-012,LOC-001,Solución salina 500 ml,,SOBRESTOCK,MEDIA,2400,8400000.0,135 días de cobertura; 2400 u sobre el stock máximo (1430). No pedir; evaluar traslado.
+76,2025-12-31,MED-009,LOC-001,Mascarilla quirúrgica,,SOBRESTOCK,MEDIA,6480,7776000.0,147 días de cobertura; 6480 u sobre el stock máximo (2490). No pedir; evaluar traslado.
+77,2025-12-31,MED-012,LOC-002,Solución salina 500 ml,,SOBRESTOCK,MEDIA,2127,7444500.0,149 días de cobertura; 2127 u sobre el stock máximo (1094). No pedir; evaluar traslado.
+78,2025-12-31,MED-014,LOC-001,Alcohol antiséptico,,SOBRESTOCK,MEDIA,1465,6153000.0,134 días de cobertura; 1465 u sobre el stock máximo (695). No pedir; evaluar traslado.
+79,2025-12-31,MED-014,LOC-002,Alcohol antiséptico,,SOBRESTOCK,MEDIA,1450,6090000.0,165 días de cobertura; 1450 u sobre el stock máximo (516). No pedir; evaluar traslado.
+80,2025-12-31,MED-009,LOC-003,Mascarilla quirúrgica,,SOBRESTOCK,MEDIA,4533,5439600.0,165 días de cobertura; 4533 u sobre el stock máximo (1486). No pedir; evaluar traslado.
+81,2025-12-31,MED-009,LOC-002,Mascarilla quirúrgica,,SOBRESTOCK,MEDIA,4336,5203200.0,131 días de cobertura; 4336 u sobre el stock máximo (1953). No pedir; evaluar traslado.
+82,2025-12-31,MED-013,LOC-001,Equipo de venoclisis,,SOBRESTOCK,MEDIA,2435,5113500.0,144 días de cobertura; 2435 u sobre el stock máximo (1234). No pedir; evaluar traslado.
+83,2025-12-31,MED-015,LOC-001,Esparadrapo médico,,SOBRESTOCK,MEDIA,1627,4230200.0,129 días de cobertura; 1627 u sobre el stock máximo (781). No pedir; evaluar traslado.
+84,2025-12-31,MED-012,LOC-003,Solución salina 500 ml,,SOBRESTOCK,MEDIA,1185,4147500.0,122 días de cobertura; 1185 u sobre el stock máximo (843). No pedir; evaluar traslado.
+85,2025-12-31,MED-014,LOC-003,Alcohol antiséptico,,SOBRESTOCK,MEDIA,968,4065600.0,150 días de cobertura; 968 u sobre el stock máximo (393). No pedir; evaluar traslado.
+86,2025-12-31,MED-008,LOC-001,Apósito transparente,,SOBRESTOCK,MEDIA,2197,4064450.0,137 días de cobertura; 2197 u sobre el stock máximo (1090). No pedir; evaluar traslado.
+87,2025-12-31,MED-012,LOC-005,Solución salina 500 ml,,SOBRESTOCK,MEDIA,1046,3661000.0,123 días de cobertura; 1046 u sobre el stock máximo (735). No pedir; evaluar traslado.
+88,2025-12-31,MED-006,LOC-001,Catéter intravenoso 22G,,SOBRESTOCK,MEDIA,1227,3558300.0,149 días de cobertura; 1227 u sobre el stock máximo (680). No pedir; evaluar traslado.
+89,2025-12-31,MED-005,LOC-001,Catéter intravenoso 20G,,SOBRESTOCK,MEDIA,1237,3463600.0,140 días de cobertura; 1237 u sobre el stock máximo (750). No pedir; evaluar traslado.
+90,2025-12-31,MED-009,LOC-004,Mascarilla quirúrgica,,SOBRESTOCK,MEDIA,2846,3415200.0,141 días de cobertura; 2846 u sobre el stock máximo (1154). No pedir; evaluar traslado.
+91,2025-12-31,MED-013,LOC-002,Equipo de venoclisis,,SOBRESTOCK,MEDIA,1564,3284400.0,130 días de cobertura; 1564 u sobre el stock máximo (929). No pedir; evaluar traslado.
+92,2025-12-31,MED-014,LOC-005,Alcohol antiséptico,,SOBRESTOCK,MEDIA,768,3225600.0,135 días de cobertura; 768 u sobre el stock máximo (360). No pedir; evaluar traslado.
+93,2025-12-31,MED-001,LOC-001,Guantes de nitrilo talla M,,SOBRESTOCK,MEDIA,7166,3224700.0,146 días de cobertura; 7166 u sobre el stock máximo (2925). No pedir; evaluar traslado.
+94,2025-12-31,MED-008,LOC-002,Apósito transparente,,SOBRESTOCK,MEDIA,1724,3189400.0,141 días de cobertura; 1724 u sobre el stock máximo (821). No pedir; evaluar traslado.
+95,2025-12-31,MED-009,LOC-005,Mascarilla quirúrgica,,SOBRESTOCK,MEDIA,2577,3092400.0,120 días de cobertura; 2577 u sobre el stock máximo (1326). No pedir; evaluar traslado.
+96,2025-12-31,MED-010,LOC-001,Tubo de extracción EDTA,,SOBRESTOCK,MEDIA,3255,3092250.0,143 días de cobertura; 3255 u sobre el stock máximo (1794). No pedir; evaluar traslado.
+97,2025-12-31,MED-005,LOC-002,Catéter intravenoso 20G,,SOBRESTOCK,MEDIA,1055,2954000.0,151 días de cobertura; 1055 u sobre el stock máximo (566). No pedir; evaluar traslado.
+98,2025-12-31,MED-012,LOC-004,Solución salina 500 ml,,SOBRESTOCK,MEDIA,809,2831500.0,114 días de cobertura; 809 u sobre el stock máximo (648). No pedir; evaluar traslado.
+99,2025-12-31,MED-002,LOC-001,Guantes de nitrilo talla L,,SOBRESTOCK,MEDIA,6014,2826580.0,143 días de cobertura; 6014 u sobre el stock máximo (2554). No pedir; evaluar traslado.
+100,2025-12-31,MED-010,LOC-002,Tubo de extracción EDTA,,SOBRESTOCK,MEDIA,2945,2797750.0,162 días de cobertura; 2945 u sobre el stock máximo (1337). No pedir; evaluar traslado.
+101,2025-12-31,MED-015,LOC-002,Esparadrapo médico,,SOBRESTOCK,MEDIA,1058,2750800.0,113 días de cobertura; 1058 u sobre el stock máximo (621). No pedir; evaluar traslado.
+102,2025-12-31,MED-014,LOC-004,Alcohol antiséptico,,SOBRESTOCK,MEDIA,618,2595600.0,132 días de cobertura; 618 u sobre el stock máximo (301). No pedir; evaluar traslado.
+103,2025-12-31,MED-013,LOC-005,Equipo de venoclisis,,SOBRESTOCK,MEDIA,1230,2583000.0,144 días de cobertura; 1230 u sobre el stock máximo (624). No pedir; evaluar traslado.
+104,2025-12-31,MED-006,LOC-002,Catéter intravenoso 22G,,SOBRESTOCK,MEDIA,872,2528800.0,146 días de cobertura; 872 u sobre el stock máximo (499). No pedir; evaluar traslado.
+105,2025-12-31,MED-013,LOC-003,Equipo de venoclisis,,SOBRESTOCK,MEDIA,1182,2482200.0,126 días de cobertura; 1182 u sobre el stock máximo (736). No pedir; evaluar traslado.
+106,2025-12-31,MED-008,LOC-003,Apósito transparente,,SOBRESTOCK,MEDIA,1306,2416100.0,140 días de cobertura; 1306 u sobre el stock máximo (634). No pedir; evaluar traslado.
+107,2025-12-31,MED-015,LOC-003,Esparadrapo médico,,SOBRESTOCK,MEDIA,917,2384200.0,126 días de cobertura; 917 u sobre el stock máximo (460). No pedir; evaluar traslado.
+108,2025-12-31,MED-007,LOC-001,Gasas estériles 10x10,,SOBRESTOCK,MEDIA,3532,2295800.0,111 días de cobertura; 3532 u sobre el stock máximo (2051). No pedir; evaluar traslado.
+109,2025-12-31,MED-004,LOC-001,Jeringa 10 ml,,SOBRESTOCK,MEDIA,4166,2166320.0,160 días de cobertura; 4166 u sobre el stock máximo (1701). No pedir; evaluar traslado.
+110,2025-12-31,MED-015,LOC-005,Esparadrapo médico,,SOBRESTOCK,MEDIA,818,2126800.0,127 días de cobertura; 818 u sobre el stock máximo (406). No pedir; evaluar traslado.
+111,2025-12-31,MED-007,LOC-002,Gasas estériles 10x10,,SOBRESTOCK,MEDIA,3255,2115750.0,128 días de cobertura; 3255 u sobre el stock máximo (1526). No pedir; evaluar traslado.
+112,2025-12-31,MED-001,LOC-002,Guantes de nitrilo talla M,,SOBRESTOCK,MEDIA,4525,2036250.0,127 días de cobertura; 4525 u sobre el stock máximo (2266). No pedir; evaluar traslado.
+113,2025-12-31,MED-013,LOC-004,Equipo de venoclisis,,SOBRESTOCK,MEDIA,956,2007600.0,135 días de cobertura; 956 u sobre el stock máximo (535). No pedir; evaluar traslado.
+114,2025-12-31,MED-008,LOC-005,Apósito transparente,,SOBRESTOCK,MEDIA,1033,1911050.0,128 días de cobertura; 1033 u sobre el stock máximo (570). No pedir; evaluar traslado.
+115,2025-12-31,MED-011,LOC-002,Tubo de extracción suero,,SOBRESTOCK,MEDIA,2104,1893600.0,137 días de cobertura; 2104 u sobre el stock máximo (1204). No pedir; evaluar traslado.
+116,2025-12-31,MED-011,LOC-001,Tubo de extracción suero,,SOBRESTOCK,MEDIA,2085,1876500.0,115 días de cobertura; 2085 u sobre el stock máximo (1594). No pedir; evaluar traslado.
+117,2025-12-31,MED-007,LOC-003,Gasas estériles 10x10,,SOBRESTOCK,MEDIA,2781,1807650.0,134 días de cobertura; 2781 u sobre el stock máximo (1210). No pedir; evaluar traslado.
+118,2025-12-31,MED-003,LOC-001,Jeringa 5 ml,,SOBRESTOCK,MEDIA,4686,1780680.0,144 días de cobertura; 4686 u sobre el stock máximo (2157). No pedir; evaluar traslado.
+119,2025-12-31,MED-006,LOC-003,Catéter intravenoso 22G,,SOBRESTOCK,MEDIA,614,1780600.0,139 días de cobertura; 614 u sobre el stock máximo (381). No pedir; evaluar traslado.
+120,2025-12-31,MED-015,LOC-004,Esparadrapo médico,,SOBRESTOCK,MEDIA,671,1744600.0,120 días de cobertura; 671 u sobre el stock máximo (360). No pedir; evaluar traslado.
+121,2025-12-31,MED-005,LOC-005,Catéter intravenoso 20G,,SOBRESTOCK,MEDIA,605,1694000.0,134 días de cobertura; 605 u sobre el stock máximo (394). No pedir; evaluar traslado.
+122,2025-12-31,MED-001,LOC-003,Guantes de nitrilo talla M,,SOBRESTOCK,MEDIA,3758,1691100.0,134 días de cobertura; 3758 u sobre el stock máximo (1734). No pedir; evaluar traslado.
+123,2025-12-31,MED-005,LOC-003,Catéter intravenoso 20G,,SOBRESTOCK,MEDIA,601,1682800.0,125 días de cobertura; 601 u sobre el stock máximo (440). No pedir; evaluar traslado.
+124,2025-12-31,MED-002,LOC-002,Guantes de nitrilo talla L,,SOBRESTOCK,MEDIA,3330,1565100.0,115 días de cobertura; 3330 u sobre el stock máximo (1968). No pedir; evaluar traslado.
+125,2025-12-31,MED-006,LOC-005,Catéter intravenoso 22G,,SOBRESTOCK,MEDIA,538,1560200.0,134 días de cobertura; 538 u sobre el stock máximo (354). No pedir; evaluar traslado.
+126,2025-12-31,MED-007,LOC-005,Gasas estériles 10x10,,SOBRESTOCK,MEDIA,2379,1546350.0,132 días de cobertura; 2379 u sobre el stock máximo (1063). No pedir; evaluar traslado.
+127,2025-12-31,MED-001,LOC-005,Guantes de nitrilo talla M,,SOBRESTOCK,MEDIA,3402,1530900.0,135 días de cobertura; 3402 u sobre el stock máximo (1555). No pedir; evaluar traslado.
+128,2025-12-31,MED-010,LOC-005,Tubo de extracción EDTA,,SOBRESTOCK,MEDIA,1573,1494350.0,139 días de cobertura; 1573 u sobre el stock máximo (908). No pedir; evaluar traslado.
+129,2025-12-31,MED-008,LOC-004,Apósito transparente,,SOBRESTOCK,MEDIA,790,1461500.0,120 días de cobertura; 790 u sobre el stock máximo (481). No pedir; evaluar traslado.
+130,2025-12-31,MED-002,LOC-005,Guantes de nitrilo talla L,,SOBRESTOCK,MEDIA,3077,1446190.0,142 días de cobertura; 3077 u sobre el stock máximo (1317). No pedir; evaluar traslado.
+131,2025-12-31,MED-006,LOC-004,Catéter intravenoso 22G,,SOBRESTOCK,MEDIA,490,1421000.0,138 días de cobertura; 490 u sobre el stock máximo (306). No pedir; evaluar traslado.
+132,2025-12-31,MED-007,LOC-004,Gasas estériles 10x10,,SOBRESTOCK,MEDIA,2164,1406600.0,139 días de cobertura; 2164 u sobre el stock máximo (899). No pedir; evaluar traslado.
+133,2025-12-31,MED-002,LOC-003,Guantes de nitrilo talla L,,SOBRESTOCK,MEDIA,2912,1368640.0,124 días de cobertura; 2912 u sobre el stock máximo (1518). No pedir; evaluar traslado.
+134,2025-12-31,MED-005,LOC-004,Catéter intravenoso 20G,,SOBRESTOCK,MEDIA,482,1349600.0,128 días de cobertura; 482 u sobre el stock máximo (339). No pedir; evaluar traslado.
+135,2025-12-31,MED-001,LOC-004,Guantes de nitrilo talla M,,SOBRESTOCK,MEDIA,2959,1331550.0,137 días de cobertura; 2959 u sobre el stock máximo (1331). No pedir; evaluar traslado.
+136,2025-12-31,MED-004,LOC-002,Jeringa 10 ml,,SOBRESTOCK,MEDIA,2540,1320800.0,134 días de cobertura; 2540 u sobre el stock máximo (1348). No pedir; evaluar traslado.
+137,2025-12-31,MED-010,LOC-003,Tubo de extracción EDTA,,SOBRESTOCK,MEDIA,1355,1287250.0,117 días de cobertura; 1355 u sobre el stock máximo (1040). No pedir; evaluar traslado.
+138,2025-12-31,MED-010,LOC-004,Tubo de extracción EDTA,,SOBRESTOCK,MEDIA,1351,1283450.0,137 días de cobertura; 1351 u sobre el stock máximo (796). No pedir; evaluar traslado.
+139,2025-12-31,MED-002,LOC-004,Guantes de nitrilo talla L,,SOBRESTOCK,MEDIA,2710,1273700.0,144 días de cobertura; 2710 u sobre el stock máximo (1138). No pedir; evaluar traslado.
+140,2025-12-31,MED-011,LOC-005,Tubo de extracción suero,,SOBRESTOCK,MEDIA,1320,1188000.0,129 días de cobertura; 1320 u sobre el stock máximo (825). No pedir; evaluar traslado.
+141,2025-12-31,MED-011,LOC-004,Tubo de extracción suero,,SOBRESTOCK,MEDIA,1303,1172700.0,141 días de cobertura; 1303 u sobre el stock máximo (709). No pedir; evaluar traslado.
+142,2025-12-31,MED-011,LOC-003,Tubo de extracción suero,,SOBRESTOCK,MEDIA,1281,1152900.0,120 días de cobertura; 1281 u sobre el stock máximo (911). No pedir; evaluar traslado.
+143,2025-12-31,MED-003,LOC-002,Jeringa 5 ml,,SOBRESTOCK,MEDIA,2997,1138860.0,130 días de cobertura; 2997 u sobre el stock máximo (1613). No pedir; evaluar traslado.
+144,2025-12-31,MED-004,LOC-003,Jeringa 10 ml,,SOBRESTOCK,MEDIA,2066,1074320.0,140 días de cobertura; 2066 u sobre el stock máximo (1027). No pedir; evaluar traslado.
+145,2025-12-31,MED-003,LOC-005,Jeringa 5 ml,,SOBRESTOCK,MEDIA,2305,875900.0,139 días de cobertura; 2305 u sobre el stock máximo (1112). No pedir; evaluar traslado.
+146,2025-12-31,MED-003,LOC-003,Jeringa 5 ml,,SOBRESTOCK,MEDIA,2248,854240.0,127 días de cobertura; 2248 u sobre el stock máximo (1256). No pedir; evaluar traslado.
+147,2025-12-31,MED-004,LOC-005,Jeringa 10 ml,,SOBRESTOCK,MEDIA,1342,697840.0,114 días de cobertura; 1342 u sobre el stock máximo (920). No pedir; evaluar traslado.
+148,2025-12-31,MED-003,LOC-004,Jeringa 5 ml,,SOBRESTOCK,MEDIA,1834,696920.0,131 días de cobertura; 1834 u sobre el stock máximo (977). No pedir; evaluar traslado.
+149,2025-12-31,MED-004,LOC-004,Jeringa 10 ml,,SOBRESTOCK,MEDIA,931,484120.0,100 días de cobertura; 931 u sobre el stock máximo (805). No pedir; evaluar traslado.
+150,2025-12-31,MED-015,LOC-003,Esparadrapo médico,LOT-00218,VENCIMIENTO,MEDIA,126,327600.0,Vence en 99 días; al ritmo actual quedarían 126 u sin consumir. Priorizar despacho o trasladar.
