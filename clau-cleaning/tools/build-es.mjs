@@ -32,7 +32,7 @@ $('[data-i18n-attr]').each((_, el) => {
     }
 });
 
-$('link[rel="canonical"]').attr('href', 'https://claucleaning.com/es/');
+$('link[rel="canonical"]').attr('href', 'https://claucleaningcorp.com/es/');
 
 // Relative paths: the Spanish page lives one folder deeper.
 const local = (v) => v && !/^(https?:|mailto:|tel:|#|data:|\.\.\/|\/)/.test(v);

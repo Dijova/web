@@ -1,5 +1,5 @@
 /**
- * CLAU Cleaning Corp — quote form backend (Google Apps Script).
+ * Clau Cleaning Corp — quote form backend (Google Apps Script).
  *
  * Stores each quote request in a private Google Sheet and emails a plain-text
  * notification to the business. See README.md in this folder for setup.
@@ -17,12 +17,12 @@
 var CONFIG = {
   SHEET_NAME: 'Quote Requests',
   NOTIFY_EMAIL: 'claucleaningcorpc2@gmail.com',
-  // Leave empty to accept any origin, or list the live site origins, e.g. ['https://claucleaning.com'].
+  // Leave empty to accept any origin, or list the live site origins, e.g. ['https://claucleaningcorp.com'].
   ALLOWED_PAGES: [],
   MIN_FILL_MS: 3000,
   PER_EMAIL_WINDOW_S: 600,   // 1 request per email every 10 minutes
   GLOBAL_LIMIT: 30,          // max requests per hour for the whole form
-  SERVICES: ['medical', 'school', 'office', 'disinfection', 'deep', 'contract', 'other']
+  SERVICES: ['medical', 'school', 'office', 'house', 'carpet', 'disinfection', 'deep', 'contract', 'other']
 };
 
 var HEADERS = ['Timestamp', 'Name', 'Email', 'Phone', 'Service', 'Message', 'Language', 'Consent', 'Page'];
@@ -158,7 +158,7 @@ function notify_(d) {
     d.message || '-',
     '',
     '---',
-    'Security reminder: CLAU Cleaning Corp will never ask for passwords or payments through this form.',
+    'Security reminder: Clau Cleaning Corp will never ask for passwords or payments through this form.',
     'Do not open links or attachments from unknown senders. Reply only from your own email client.'
   ].join('\n');
 
@@ -166,7 +166,7 @@ function notify_(d) {
     to: CONFIG.NOTIFY_EMAIL,
     subject: 'New quote request – ' + d.name.slice(0, 60),
     body: body,
-    name: 'CLAU Cleaning Corp Website',
+    name: 'Clau Cleaning Corp Website',
     noReply: true
   });
 }

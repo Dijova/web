@@ -4,4 +4,4 @@ Disallow: /backend/
 Disallow: /tools/
 Disallow: /mockup/
 
-Sitemap: https://claucleaning.com/sitemap.xml
+Sitemap: https://claucleaningcorp.com/sitemap.xml

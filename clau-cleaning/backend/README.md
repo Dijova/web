@@ -1,12 +1,12 @@
 # Quote form backend — setup (≈10 min)
 
-The website form stores requests in a **private Google Sheet** owned by CLAU Cleaning Corp
+The website form stores requests in a **private Google Sheet** owned by Clau Cleaning Corp
 and sends a plain-text email alert. No server or paid hosting needed.
 
 1. Sign in to the business Google account (`claucleaningcorpc2@gmail.com`).
-2. Create a new Google Sheet named **CLAU – Quote Requests**. Do **not** share it publicly.
+2. Create a new Google Sheet named **Clau – Quote Requests**. Do **not** share it publicly.
 3. In the sheet: **Extensions → Apps Script**. Delete the sample code and paste `Code.gs`.
-4. (Optional) In `CONFIG.ALLOWED_PAGES` add the live domain, e.g. `['https://claucleaning.com']`.
+4. (Optional) In `CONFIG.ALLOWED_PAGES` add the live domain, e.g. `['https://claucleaningcorp.com']`.
 5. **Deploy → New deployment → Web app**
    - Execute as: **Me**
    - Who has access: **Anyone** (required so the public form can post; the script only accepts

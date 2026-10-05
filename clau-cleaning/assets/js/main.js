@@ -1,4 +1,4 @@
-/* CLAU Cleaning Corp — site script */
+/* Clau Cleaning Corp — site script */
 (function () {
     'use strict';
 
@@ -63,13 +63,14 @@
         medical: 'M10 3h4v5h5v4h-5v5h-4v-5H5V8h5z',
         schools: 'M12 3 1 9l11 6 9-4.9V17h2V9zM5 13.2v4L12 21l7-3.8v-4L12 17z',
         offices: 'M3 21V3h12v6h6v12zm2-2h2v-2H5zm0-4h2v-2H5zm0-4h2V9H5zm0-4h2V5H5zm4 12h2v-2H9zm0-4h2v-2H9zm0-4h2V9H9zm0-4h2V5H9zm4 12h6v-8h-6z',
+        homes: 'M12 3 2 12h3v8h5v-6h4v6h5v-8h3z',
         disinfection: 'M12 2s-7 8-7 13a7 7 0 0 0 14 0c0-5-7-13-7-13z'
     };
     function placeholder(cat) {
         var d = ICONS[cat] || ICONS.disinfection;
         return 'data:image/svg+xml,' + encodeURIComponent(
             '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">' +
-            '<stop offset="0" stop-color="#19B5C8"/><stop offset="1" stop-color="#0E5AA7"/></linearGradient></defs>' +
+            '<stop offset="0" stop-color="#86BC42"/><stop offset="1" stop-color="#1F7F45"/></linearGradient></defs>' +
             '<rect width="400" height="300" fill="url(#g)"/><circle cx="330" cy="40" r="120" fill="#fff" opacity=".07"/><circle cx="60" cy="280" r="90" fill="#fff" opacity=".06"/>' +
             '<g transform="translate(164 114) scale(3)"><path d="' + d + '" fill="#fff" opacity=".9"/></g></svg>');
     }
