@@ -1,0 +1,13 @@
+{
+  "name": "clau-cleaning-website",
+  "private": true,
+  "description": "CLAU Cleaning Corp website",
+  "type": "module",
+  "scripts": {
+    "build": "node tools/build-es.mjs",
+    "serve": "npx --yes http-server -p 8080 -c-1 ."
+  },
+  "devDependencies": {
+    "cheerio": "^1.0.0"
+  }
+}

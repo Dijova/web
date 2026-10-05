@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /backend/
+Disallow: /tools/
+Disallow: /mockup/
+
+Sitemap: https://claucleaning.com/sitemap.xml

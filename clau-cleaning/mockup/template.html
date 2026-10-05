@@ -1,0 +1,315 @@
+<title>CLAU Cleaning Corp Website Proposal</title>
+<meta name="robots" content="noindex">
+<style>
+/* Layout: dark navy presentation board; device frames carry the screenshots, short Spanish captions guide the client. */
+@font-face { font-family: "Poppins"; font-weight: 700; src: url({{font-poppins-700}}) format("woff2"); }
+@font-face { font-family: "Poppins"; font-weight: 800; src: url({{font-poppins-800}}) format("woff2"); }
+@font-face { font-family: "Poppins"; font-weight: 600; src: url({{font-poppins-600}}) format("woff2"); }
+@font-face { font-family: "Inter"; font-weight: 400 600; src: url({{font-inter}}) format("woff2"); }
+:root {
+    --bg: #081C31;
+    --panel: #0E2A47;
+    --panel-2: #12345A;
+    --fg: #EAF4F8;
+    --muted: #9DB4C7;
+    --aqua: #19B5C8;
+    --aqua-soft: #8CD3DD;
+    --blue: #0E5AA7;
+    --line: rgba(234, 244, 248, .12);
+    --display: "Poppins", "Segoe UI", Arial, sans-serif;
+    --body: "Inter", "Segoe UI", Arial, sans-serif;
+    color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--body); line-height: 1.6; }
+.wrap { width: min(1180px, 100%); margin: 0 auto; padding-inline: clamp(16px, 4vw, 40px); }
+section { padding-block: clamp(56px, 8vw, 96px); border-top: 1px solid var(--line); }
+h1, h2, h3 { font-family: var(--display); line-height: 1.15; margin: 0; text-wrap: balance; }
+h2 { font-size: clamp(1.6rem, 3.2vw, 2.4rem); font-weight: 700; }
+h3 { font-size: 1.05rem; font-weight: 600; }
+p { margin: 0; }
+.label { font-family: var(--display); font-weight: 600; font-size: .75rem; letter-spacing: .16em; text-transform: uppercase; color: var(--aqua); }
+.lead { color: var(--muted); font-size: 1.05rem; max-width: 62ch; }
+.head { display: grid; gap: .7rem; margin-bottom: 40px; }
+
+/* Cover */
+.cover { border-top: 0; padding-block: clamp(40px, 6vw, 72px) clamp(56px, 8vw, 96px); position: relative; overflow: hidden; }
+.cover::before { content: ""; position: absolute; width: 900px; height: 900px; right: -300px; top: -380px; border-radius: 50%; background: radial-gradient(circle, rgba(25,181,200,.22), transparent 62%); pointer-events: none; }
+.topline { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 48px; color: var(--muted); font-size: .85rem; }
+.topline svg { height: 40px; width: auto; }
+.cover-grid { display: grid; grid-template-columns: 1fr 1.25fr; gap: clamp(32px, 5vw, 64px); align-items: center; position: relative; }
+.cover h1 { font-size: clamp(2rem, 4.6vw, 3.4rem); font-weight: 800; margin: .8rem 0 1.1rem; }
+.cover h1 span { color: var(--aqua-soft); }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 1.6rem; }
+.chip { border: 1px solid var(--line); background: var(--panel); border-radius: 999px; padding: .35rem .85rem; font-size: .82rem; color: var(--fg); }
+
+/* Device frames */
+.stage { position: relative; padding-bottom: 40px; min-width: 0; }
+.browser { border-radius: 12px; background: var(--panel-2); box-shadow: 0 30px 80px rgba(0,0,0,.45); overflow: hidden; border: 1px solid var(--line); }
+.browser-bar { display: flex; align-items: center; gap: 6px; padding: 10px 12px; background: var(--panel); }
+.browser-bar i { width: 10px; height: 10px; border-radius: 50%; background: #3B5876; display: block; }
+.browser-bar span { margin-left: 10px; flex: 1; font-size: .72rem; color: var(--muted); background: var(--bg); border-radius: 6px; padding: 3px 10px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.browser img, .phone img, .tablet img { display: block; width: 100%; height: auto; max-width: 100%; }
+.phone { width: 30%; max-width: 200px; border-radius: 26px; padding: 7px; background: #02101E; box-shadow: 0 24px 60px rgba(0,0,0,.55); border: 1px solid var(--line); }
+.phone img { border-radius: 20px; }
+.stage .phone { position: absolute; right: -14px; bottom: 0; }
+.tablet { border-radius: 22px; padding: 10px; background: #02101E; border: 1px solid var(--line); box-shadow: 0 24px 60px rgba(0,0,0,.45); }
+.tablet img { border-radius: 12px; }
+
+/* Brand */
+.brand-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 24px; display: grid; gap: 14px; align-content: start; min-width: 0; }
+.swatches { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.sw { border-radius: 10px; overflow: hidden; border: 1px solid var(--line); font-size: .72rem; }
+.sw b { display: block; height: 58px; }
+.sw span { display: block; padding: 6px 8px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.type-sample { font-family: var(--display); font-weight: 800; font-size: 2.4rem; line-height: 1; }
+.logo-box { background: #fff; border-radius: 12px; padding: 18px; display: grid; place-items: center; }
+.logo-box.dark { background: var(--bg); }
+.logo-box svg { height: 46px; width: auto; }
+.note { font-size: .82rem; color: var(--muted); }
+
+/* Sitemap */
+.map-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; counter-reset: s; padding: 0; margin: 0; list-style: none; }
+.map-list li { counter-increment: s; background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; display: grid; grid-template-columns: auto 1fr; gap: 2px 12px; }
+.map-list li::before { content: counter(s, decimal-leading-zero); grid-row: span 2; font-family: var(--display); font-weight: 700; color: var(--aqua); font-variant-numeric: tabular-nums; }
+.map-list b { font-family: var(--display); font-weight: 600; }
+.map-list small { color: var(--muted); font-size: .82rem; }
+.map-list li.new { border-color: rgba(25,181,200,.55); }
+.map-list li.new b::after { content: "Nuevo"; margin-left: 8px; font-family: var(--body); font-size: .66rem; font-weight: 600; color: var(--bg); background: var(--aqua); border-radius: 999px; padding: 1px 7px; vertical-align: 2px; }
+
+/* Full page scroller */
+.scroller { max-height: 720px; overflow-y: auto; overscroll-behavior: contain; }
+
+/* Responsive row */
+.devices { display: grid; grid-template-columns: 1.3fr repeat(3, 1fr); gap: 20px; align-items: end; }
+.devices figure { margin: 0; display: grid; gap: 10px; min-width: 0; }
+.devices .phone { width: 100%; max-width: 230px; justify-self: center; }
+figcaption { font-size: .85rem; color: var(--muted); text-align: center; }
+
+/* Bilingual */
+.lang-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.lang-grid figure { margin: 0; display: grid; gap: 10px; min-width: 0; }
+
+/* Features */
+.feat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+.feat-grid ul { margin: 0; padding-left: 1.1rem; color: var(--muted); font-size: .92rem; display: grid; gap: 6px; }
+.feat-grid h3 { display: flex; align-items: center; gap: 10px; }
+.feat-grid h3 svg { width: 22px; height: 22px; color: var(--aqua); flex: none; }
+
+/* Next steps */
+.todo { display: grid; gap: 10px; padding: 0; margin: 0; list-style: none; }
+.todo li { display: grid; grid-template-columns: 26px 1fr; gap: 12px; align-items: start; background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; }
+.todo li::before { content: ""; width: 20px; height: 20px; margin-top: 2px; border: 2px solid var(--aqua); border-radius: 6px; }
+.todo b { font-family: var(--display); font-weight: 600; }
+.todo span { color: var(--muted); font-size: .92rem; display: block; }
+footer { padding-block: 32px; border-top: 1px solid var(--line); color: var(--muted); font-size: .82rem; text-align: center; }
+
+@media (max-width: 900px) {
+    .cover-grid, .lang-grid { grid-template-columns: 1fr; }
+    .devices { grid-template-columns: repeat(2, 1fr); }
+    .devices figure:first-child { grid-column: 1 / -1; }
+}
+@media (max-width: 520px) {
+    .devices { grid-template-columns: 1fr 1fr; gap: 12px; }
+    .stage .phone { right: 0; width: 34%; }
+    .swatches { grid-template-columns: repeat(2, 1fr); }
+}
+</style>
+
+<header class="cover">
+    <div class="wrap">
+        <div class="topline">
+            {{logo-dark}}
+            <span>Propuesta de sitio web · Octubre 2026</span>
+        </div>
+        <div class="cover-grid">
+            <div>
+                <p class="label">Mockup para presentación</p>
+                <h1>Un sitio web que transmite <span>higiene, confianza y profesionalismo</span></h1>
+                <p class="lead">Sitio comercial en inglés con versión completa en español, diseñado para conseguir contratos con clínicas, consultorios médicos y escuelas en Massachusetts.</p>
+                <div class="chips">
+                    <span class="chip">Inglés + Español</span>
+                    <span class="chip">Galería de trabajos</span>
+                    <span class="chip">Sección de clientes</span>
+                    <span class="chip">Formulario seguro</span>
+                    <span class="chip">SEO local</span>
+                    <span class="chip">100% responsive</span>
+                </div>
+            </div>
+            <div class="stage">
+                <div class="browser">
+                    <div class="browser-bar"><i></i><i></i><i></i><span>claucleaning.com</span></div>
+                    <img src="{{desk-hero}}" alt="Vista de escritorio: portada del sitio de CLAU Cleaning Corp">
+                </div>
+                <div class="phone"><img src="{{mob-hero}}" alt="Vista móvil de la portada"></div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section>
+        <div class="wrap">
+            <div class="head">
+                <p class="label">Identidad visual</p>
+                <h2>Marca unificada: CLAU Cleaning Corp</h2>
+                <p class="lead">Un solo nombre en todo el sitio, redes y buscadores. La paleta parte de los azules y aguamarinas del logo: el azul transmite confianza clínica y el aguamarina, limpieza y frescura.</p>
+            </div>
+            <div class="brand-grid">
+                <div class="card">
+                    <h3>Paleta de color</h3>
+                    <div class="swatches">
+                        <div class="sw"><b style="background:#0B2540"></b><span>Navy #0B2540</span></div>
+                        <div class="sw"><b style="background:#0E5AA7"></b><span>Azul #0E5AA7</span></div>
+                        <div class="sw"><b style="background:#19B5C8"></b><span>Aqua #19B5C8</span></div>
+                        <div class="sw"><b style="background:#8CD3DD"></b><span>Aqua claro #8CD3DD</span></div>
+                        <div class="sw"><b style="background:#E8F7FA"></b><span>Menta #E8F7FA</span></div>
+                        <div class="sw"><b style="background:linear-gradient(135deg,#19B5C8,#0E5AA7)"></b><span>Botones</span></div>
+                    </div>
+                    <p class="note">Se ajusta en un solo archivo cuando tengamos el logo oficial en alta resolución.</p>
+                </div>
+                <div class="card">
+                    <h3>Tipografía</h3>
+                    <p class="type-sample">Poppins</p>
+                    <p class="note">Títulos y botones: geométrica, moderna y muy legible.</p>
+                    <p style="font-size:1.4rem">Inter</p>
+                    <p class="note">Textos: diseñada para pantallas, cómoda en móvil.</p>
+                </div>
+                <div class="card">
+                    <h3>Logotipo</h3>
+                    <div class="logo-box">{{logo-light}}</div>
+                    <div class="logo-box dark">{{logo-dark}}</div>
+                    <p class="note">Versión provisional. Se reemplaza por el logo oficial de la empresa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="wrap">
+            <div class="head">
+                <p class="label">Estructura</p>
+                <h2>Misma distribución que SGM, con secciones nuevas</h2>
+                <p class="lead">El orden guía al visitante desde la primera impresión hasta pedir la cotización.</p>
+            </div>
+            <ol class="map-list">
+                <li><b>Portada</b><small>Mensaje principal, llamada y cotización</small></li>
+                <li><b>Datos clave</b><small>Desde 2011, sector salud, escuelas, 24/7</small></li>
+                <li><b>Nosotros</b><small>Especialización sanitaria y garantías</small></li>
+                <li><b>Servicios</b><small>6 servicios comerciales</small></li>
+                <li class="new"><b>Proceso</b><small>Cómo trabajamos en 4 pasos</small></li>
+                <li class="new"><b>Galería</b><small>Trabajos con filtros y visor ampliado</small></li>
+                <li class="new"><b>Clientes</b><small>Logos de clientes y reseña</small></li>
+                <li class="new"><b>Zona de servicio</b><small>Ciudades del Merrimack Valley</small></li>
+                <li class="new"><b>Preguntas frecuentes</b><small>Respuestas que también posicionan en Google</small></li>
+                <li><b>Cotización</b><small>Formulario seguro conectado a Google Sheets</small></li>
+                <li><b>Mapa y pie de página</b><small>Contacto, redes y enlaces</small></li>
+            </ol>
+        </div>
+    </section>
+
+    <section>
+        <div class="wrap">
+            <div class="head">
+                <p class="label">Página completa</p>
+                <h2>Recorrido del sitio en escritorio</h2>
+                <p class="lead">Desplácese dentro del navegador para ver la página completa.</p>
+            </div>
+            <div class="browser">
+                <div class="browser-bar"><i></i><i></i><i></i><span>claucleaning.com</span></div>
+                <div class="scroller" tabindex="0" aria-label="Página completa del sitio"><img src="{{desk-full}}" alt="Página completa del sitio de CLAU Cleaning Corp en escritorio"></div>
+            </div>
+            <p class="note" style="margin-top:12px">Los recuadros azules con íconos marcan dónde van las fotos. En el sitio publicado se muestran fotografías reales de limpieza, clínicas y escuelas, y luego las fotos propias de la empresa.</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="wrap">
+            <div class="head">
+                <p class="label">Responsive</p>
+                <h2>Se ve bien en cualquier pantalla</h2>
+                <p class="lead">En el celular aparece un botón flotante para llamar con un toque, el canal que más usan los administradores de clínicas y escuelas.</p>
+            </div>
+            <div class="devices">
+                <figure><div class="tablet"><img src="{{tab}}" alt="Vista en tableta"></div><figcaption>Tableta</figcaption></figure>
+                <figure><div class="phone"><img src="{{mob-menu}}" alt="Menú móvil con selector de idioma"></div><figcaption>Menú móvil</figcaption></figure>
+                <figure><div class="phone"><img src="{{mob-gallery}}" alt="Galería en móvil"></div><figcaption>Galería con filtros</figcaption></figure>
+                <figure><div class="phone"><img src="{{mob-form}}" alt="Formulario en móvil"></div><figcaption>Formulario</figcaption></figure>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="wrap">
+            <div class="head">
+                <p class="label">Bilingüe</p>
+                <h2>Inglés por defecto, español con un clic</h2>
+                <p class="lead">La versión en español es una página real (/es/), no una traducción automática. Google la indexa por separado y la muestra a quienes buscan en español.</p>
+            </div>
+            <div class="lang-grid">
+                <figure><div class="browser"><div class="browser-bar"><i></i><i></i><i></i><span>claucleaning.com</span></div><img src="{{desk-hero}}" alt="Portada en inglés"></div><figcaption>English</figcaption></figure>
+                <figure><div class="browser"><div class="browser-bar"><i></i><i></i><i></i><span>claucleaning.com/es/</span></div><img src="{{desk-es}}" alt="Portada en español"></div><figcaption>Español</figcaption></figure>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="wrap">
+            <div class="head">
+                <p class="label">Lo que no se ve</p>
+                <h2>Seguridad y posicionamiento incluidos</h2>
+            </div>
+            <div class="feat-grid">
+                <div class="card">
+                    <h3><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2 4 5v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V5zm-1 14-4-4 1.4-1.4L11 13.2l4.6-4.6L17 10z"/></svg>Formulario protegido</h3>
+                    <ul>
+                        <li>Datos guardados en una hoja privada de Google de la empresa</li>
+                        <li>Filtros anti-spam y anti-bots, límite de envíos</li>
+                        <li>Bloqueo de código malicioso y enlaces sospechosos</li>
+                        <li>Avisos por correo en texto plano, sin enlaces peligrosos</li>
+                        <li>Política de seguridad que impide scripts de terceros</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M10 2a8 8 0 0 1 6.3 12.9l5.4 5.4-1.4 1.4-5.4-5.4A8 8 0 1 1 10 2zm0 2a6 6 0 1 0 0 12 6 6 0 0 0 0-12z"/></svg>SEO local</h3>
+                    <ul>
+                        <li>Títulos y descripciones optimizados para “commercial cleaning Dracut MA”</li>
+                        <li>Datos estructurados de negocio local para Google</li>
+                        <li>Preguntas frecuentes, ciudades atendidas y mapa</li>
+                        <li>Sitemap, robots.txt e imagen para compartir en redes</li>
+                        <li>Carga rápida: fuentes propias y fotos diferidas</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H8v4h2v8h4v-8h3l1-4h-4V8z"/></svg>Redes y contacto</h3>
+                    <ul>
+                        <li>Facebook e Instagram enlazados en galería y pie de página</li>
+                        <li>Teléfono +1 978-328-2406 con llamada directa</li>
+                        <li>claucleaningcorpc2@gmail.com</li>
+                        <li>1734 Lakeview Ave #169, Dracut, MA 01826</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="wrap">
+            <div class="head">
+                <p class="label">Siguientes pasos</p>
+                <h2>Lo que necesitamos del cliente</h2>
+            </div>
+            <ul class="todo">
+                <li><div><b>Logo oficial</b><span>En PNG o SVG de alta resolución para ajustar los colores exactos.</span></div></li>
+                <li><div><b>Fotos de trabajos reales</b><span>10 a 15 fotos de Facebook o del celular: clínicas, escuelas, antes y después.</span></div></li>
+                <li><div><b>Clientes y una reseña</b><span>Nombres o logos de clientes que autoricen aparecer, y una frase de recomendación.</span></div></li>
+                <li><div><b>Usuario de Instagram</b><span>Para enlazar la cuenta correcta.</span></div></li>
+                <li><div><b>Confirmar datos</b><span>Dominio, año de fundación (2011), seguro y certificaciones que se mencionan.</span></div></li>
+            </ul>
+        </div>
+    </section>
+</main>
+<footer>
+    <div class="wrap">CLAU Cleaning Corp · Propuesta de sitio web · Mockup de presentación</div>
+</footer>
