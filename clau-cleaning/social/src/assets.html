@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Clau Cleaning Corp social assets</title>
+<!-- Source for tools/build-social.mjs: every [data-export] element is rendered to PNG at its real pixel size. -->
+<style>
+@font-face { font-family: "Comfortaa"; font-weight: 500 700; src: url("../../assets/fonts/comfortaa-var-latin.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-weight: 400 600; src: url("../../assets/fonts/inter-var-latin.woff2") format("woff2"); }
+:root {
+    --forest: #0F3D25; --forest-deep: #0A2A19; --green: #1F7F45; --leaf: #86BC42; --leaf-soft: #B9DB8A;
+    --tint: #EFF6E8; --white: #FFFFFF; --ink: #1A2B21;
+    --head: "Comfortaa", Arial, sans-serif; --body: "Inter", Arial, sans-serif;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: #777; font-family: var(--body); display: flex; flex-direction: column; gap: 40px; padding: 40px; width: max-content; }
+[data-export] { position: relative; overflow: hidden; flex: none; }
+h1, h2, h3, .head { font-family: var(--head); font-weight: 700; line-height: 1.12; }
+
+/* Shared pieces */
+.bg-forest { background: radial-gradient(circle at 85% 15%, rgba(134,188,66,.28), transparent 45%), linear-gradient(160deg, var(--forest) 0%, var(--forest-deep) 100%); color: var(--white); }
+.bg-tint { background: var(--tint); color: var(--ink); }
+.broom-pattern::after {
+    content: ""; position: absolute; inset: 0; opacity: .06; pointer-events: none;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cg fill='%23ffffff'%3E%3Crect x='57' y='14' width='6' height='62' rx='3'/%3E%3Crect x='42' y='76' width='36' height='20' rx='3'/%3E%3C/g%3E%3C/svg%3E") 0 0 / 120px 120px;
+}
+.photo {
+    position: absolute; display: grid; place-items: center; color: rgba(255,255,255,.92);
+    background: linear-gradient(135deg, var(--leaf) 0%, var(--green) 100%);
+    font-family: var(--body); font-weight: 600; letter-spacing: .08em; text-transform: uppercase; text-align: center;
+}
+.photo span { display: grid; gap: 14px; justify-items: center; font-size: 30px; }
+.photo svg { width: 96px; height: 96px; opacity: .9; }
+.tag { display: inline-block; font-family: var(--body); font-weight: 600; letter-spacing: .14em; text-transform: uppercase; }
+.pill { display: inline-flex; align-items: center; gap: 14px; border-radius: 999px; font-family: var(--body); font-weight: 600; }
+.brandbar { position: absolute; left: 0; right: 0; bottom: 0; display: flex; align-items: center; justify-content: space-between; padding: 0 64px; height: 130px; background: var(--forest); color: var(--white); }
+.brandbar img { height: 60px; }
+.brandbar b { font-family: var(--body); font-weight: 600; font-size: 30px; color: var(--leaf-soft); }
+
+/* Profile pictures */
+#profile-icon { width: 1080px; height: 1080px; background: var(--forest); display: grid; place-items: center; }
+#profile-icon img { width: 820px; height: 820px; }
+#profile-logo { width: 1080px; height: 1080px; background: var(--white); display: grid; place-items: center; }
+#profile-logo img { width: 860px; height: 473px; }
+
+/* Facebook cover: 1640 x 924. Desktop shows the middle 1640 x 624 band; phones show it all. */
+#fb-cover { width: 1640px; height: 924px; }
+#fb-cover .inner { position: absolute; left: 470px; right: 110px; top: 190px; bottom: 190px; display: flex; flex-direction: column; justify-content: center; gap: 22px; }
+#fb-cover .tag { color: var(--leaf); font-size: 24px; }
+#fb-cover h1 { font-size: 78px; }
+#fb-cover h1 span { color: var(--leaf); }
+#fb-cover .services { font-size: 30px; color: rgba(255,255,255,.85); }
+#fb-cover .row { display: flex; gap: 18px; margin-top: 10px; }
+#fb-cover .pill { font-size: 30px; padding: 16px 30px; background: var(--green); border: 3px solid var(--leaf); }
+#fb-cover .pill.ghost { background: transparent; border-color: rgba(255,255,255,.4); }
+#fb-cover .logo { position: absolute; left: 110px; top: 50%; transform: translateY(-50%); width: 300px; }
+#fb-cover .logo.hide-desktop-overlap { top: 46%; }
+
+/* Highlight covers: 1080 x 1920, artwork inside the central circle */
+.hl { width: 1080px; height: 1920px; display: grid; place-items: center; }
+.hl .ring { width: 640px; height: 640px; border-radius: 50%; display: grid; place-items: center; background: rgba(255,255,255,.06); border: 6px solid var(--leaf); }
+.hl svg { width: 300px; height: 300px; color: var(--white); }
+
+/* Posts: 1080 x 1350 (4:5). The profile grid shows a centred 3:4 crop (1012 x 1350), so text stays at least 90 px from the sides. */
+.post { width: 1080px; height: 1350px; }
+.post .pad { position: absolute; inset: 90px 90px 180px; display: flex; flex-direction: column; }
+.post h2 { font-size: 92px; }
+.post h2 span { color: var(--leaf); }
+.bg-tint h2 span { color: var(--green); }
+.post p.lead { font-size: 38px; line-height: 1.35; margin-top: 30px; opacity: .9; }
+.post .swipe { margin-top: auto; font-size: 32px; font-weight: 600; color: var(--leaf); }
+
+#post-before-after .photo { top: 0; height: 1220px; width: 540px; }
+#post-before-after .photo.a { left: 0; background: linear-gradient(135deg, #8C9A86, #5E6B5A); }
+#post-before-after .photo.b { right: 0; }
+#post-before-after .label { position: absolute; top: 60px; font-size: 34px; padding: 14px 30px; border-radius: 999px; background: var(--white); color: var(--forest); font-weight: 700; font-family: var(--body); letter-spacing: .12em; }
+#post-before-after .label.a { left: 60px; }
+#post-before-after .label.b { right: 60px; background: var(--leaf); }
+#post-before-after .divider { position: absolute; left: 534px; top: 0; width: 12px; height: 1220px; background: var(--white); }
+
+#post-tips .num { display: grid; gap: 34px; margin-top: 60px; }
+#post-tips .num div { display: flex; gap: 30px; align-items: center; font-size: 44px; font-weight: 600; }
+#post-tips .num b { flex: none; width: 92px; height: 92px; border-radius: 24px; display: grid; place-items: center; background: var(--leaf); color: var(--forest); font-family: var(--head); font-size: 50px; }
+
+#post-service .photo { left: 0; right: 0; top: 0; height: 700px; }
+#post-service .pad { top: 760px; }
+#post-service h2 { font-size: 84px; color: var(--forest); }
+#post-service p.lead { margin-top: 18px; color: var(--green); font-weight: 600; }
+
+#post-reel .photo { inset: 0; }
+#post-reel .play { position: absolute; left: 50%; top: 42%; transform: translate(-50%, -50%); width: 190px; height: 190px; border-radius: 50%; background: rgba(15,61,37,.75); display: grid; place-items: center; border: 6px solid var(--white); }
+#post-reel .play::after { content: ""; border-left: 62px solid var(--white); border-top: 38px solid transparent; border-bottom: 38px solid transparent; margin-left: 16px; }
+#post-reel .title { position: absolute; left: 70px; right: 70px; bottom: 210px; font-size: 84px; color: var(--white); text-shadow: 0 4px 30px rgba(0,0,0,.35); }
+#post-reel .title span { display: inline-block; background: var(--leaf); color: var(--forest); padding: 4px 20px; border-radius: 16px; font-size: 40px; font-family: var(--body); margin-bottom: 22px; }
+
+#post-review .q { font-family: var(--head); font-size: 260px; color: var(--leaf); line-height: .7; height: 150px; }
+#post-review blockquote { font-family: var(--head); font-weight: 700; font-size: 62px; line-height: 1.25; margin-top: 30px; }
+#post-review .stars { font-size: 64px; color: var(--leaf); letter-spacing: 10px; margin-top: 40px; }
+#post-review .who { margin-top: 18px; font-size: 34px; opacity: .8; }
+
+#post-bilingual { text-align: left; }
+#post-bilingual h2 { font-size: 100px; }
+#post-bilingual .es { margin-top: 50px; padding-top: 50px; border-top: 4px solid rgba(255,255,255,.2); }
+
+#post-years .big { font-family: var(--head); font-weight: 700; font-size: 380px; line-height: .9; color: var(--leaf); margin-top: 40px; }
+#post-years h2 { font-size: 80px; color: var(--forest); }
+
+#post-team .photo { left: 70px; right: 70px; top: 70px; height: 860px; border-radius: 40px; }
+#post-team .pad { top: 980px; }
+#post-team h2 { font-size: 78px; color: var(--forest); }
+
+#post-quote h2 { font-size: 96px; }
+#post-quote .ways { display: grid; gap: 26px; margin-top: 70px; }
+#post-quote .ways div { display: flex; align-items: center; gap: 26px; font-size: 44px; font-weight: 600; }
+#post-quote .ways i { width: 84px; height: 84px; border-radius: 50%; background: var(--leaf); display: grid; place-items: center; flex: none; }
+#post-quote .ways svg { width: 44px; height: 44px; color: var(--forest); }
+
+/* Story template: 1080 x 1920. Keep the top 250 px and bottom 340 px clear of key content (app UI). */
+.story { width: 1080px; height: 1920px; }
+.story .photo { inset: 0; }
+.story .shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,42,25,.65) 0%, rgba(10,42,25,0) 30%, rgba(10,42,25,0) 60%, rgba(10,42,25,.85) 100%); }
+.story h2 { position: absolute; left: 80px; right: 80px; top: 280px; font-size: 96px; color: var(--white); }
+.story h2 span { color: var(--leaf); }
+.story .brandbar { height: 150px; }
+</style>
+</head>
+<body>
+
+<!-- PROFILE PICTURES -->
+<div id="profile-icon" data-export="profile-icon.png"><img src="../../assets/img/favicon.svg" alt=""></div>
+<div id="profile-logo" data-export="profile-logo.png"><img src="../../assets/img/logo.svg" alt=""></div>
+
+<!-- FACEBOOK COVER -->
+<div id="fb-cover" class="bg-forest broom-pattern" data-export="facebook-cover.png">
+    <img class="logo" src="../../assets/img/logo-white.svg" alt="">
+    <div class="inner">
+        <span class="tag">Dracut · Lowell · Merrimack Valley, MA</span>
+        <h1>Commercial &amp; <span>House Cleaning</span></h1>
+        <p class="services">Clinics · Schools · Offices · Homes · Carpet &amp; Floor Care</p>
+        <div class="row">
+            <span class="pill">978-328-2406</span>
+            <span class="pill ghost">claucleaningcorp.com</span>
+            <span class="pill ghost">English · Español</span>
+        </div>
+    </div>
+</div>
+
+<!-- HIGHLIGHT COVERS -->
+<div class="hl bg-forest" data-export="highlight-services.png"><div class="ring"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M9 2l1.6 4.4L15 8l-4.4 1.6L9 14l-1.6-4.4L3 8l4.4-1.6zm8 8l1 2.6 2.6 1-2.6 1L17 17l-1-2.4-2.6-1 2.6-1zM6 16l.8 2.2L9 19l-2.2.8L6 22l-.8-2.2L3 19l2.2-.8z"/></svg></div></div>
+<div class="hl bg-forest" data-export="highlight-before-after.png"><div class="ring"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M11 2h2v20h-2zM4 5h5v2H5v10h4v2H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm11 0h5a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1h-5v-2h4V7h-4z"/></svg></div></div>
+<div class="hl bg-forest" data-export="highlight-clinics.png"><div class="ring"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M10 3h4v5h5v4h-5v5h-4v-5H5V8h5z"/></svg></div></div>
+<div class="hl bg-forest" data-export="highlight-schools.png"><div class="ring"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 3 1 9l11 6 9-4.9V17h2V9zM5 13.2v4L12 21l7-3.8v-4L12 17z"/></svg></div></div>
+<div class="hl bg-forest" data-export="highlight-homes.png"><div class="ring"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 3 2 12h3v8h5v-6h4v6h5v-8h3z"/></svg></div></div>
+<div class="hl bg-forest" data-export="highlight-reviews.png"><div class="ring"><svg viewBox="0 0 24 24"><path fill="currentColor" d="m12 2 3 6.3 6.9.9-5 4.8 1.2 6.9L12 17.6 5.9 20.9 7.1 14l-5-4.8 6.9-.9z"/></svg></div></div>
+<div class="hl bg-forest" data-export="highlight-quote.png"><div class="ring"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M4 3h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H8l-5 4V4a1 1 0 0 1 1-1zm4 6v2h8V9zm0-3v2h8V6zm0 6v2h5v-2z"/></svg></div></div>
+<div class="hl bg-forest" data-export="highlight-team.png"><div class="ring"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M9 11a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm8 0a3 3 0 1 1 0-6 3 3 0 0 1 0 6zM1 20c0-3.3 3.6-6 8-6s8 2.7 8 6v1H1zm17 1v-1c0-1.7-.6-3.2-1.7-4.4 3.3.2 6.7 1.9 6.7 4.4v1z"/></svg></div></div>
+
+<!-- POSTS (1080 x 1350) -->
+<div class="post" id="post-before-after" data-export="post-01-before-after.png">
+    <div class="photo a"><span><svg viewBox="0 0 24 24"><path fill="currentColor" d="M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1 12h14l-4.5-6-3.5 4.5-2.5-3z"/></svg>Your photo</span></div>
+    <div class="photo b"><span><svg viewBox="0 0 24 24"><path fill="currentColor" d="M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1 12h14l-4.5-6-3.5 4.5-2.5-3z"/></svg>Your photo</span></div>
+    <div class="divider"></div>
+    <span class="label a">BEFORE</span><span class="label b">AFTER</span>
+    <div class="brandbar"><img src="../../assets/img/logo-horizontal-white.svg" alt=""><b>Classroom · Lowell, MA</b></div>
+</div>
+
+<div class="post bg-forest broom-pattern" id="post-tips" data-export="post-02-tips.png">
+    <div class="pad">
+        <span class="tag" style="color:var(--leaf);font-size:30px">Clinic hygiene tips</span>
+        <h2 style="margin-top:24px">3 high-touch spots clinics <span>often miss</span></h2>
+        <div class="num">
+            <div><b>1</b>Check-in pens &amp; clipboards</div>
+            <div><b>2</b>Exam room light switches</div>
+            <div><b>3</b>Waiting-room chair arms</div>
+        </div>
+        <p class="swipe">Swipe for how we clean them →</p>
+    </div>
+    <div class="brandbar"><img src="../../assets/img/logo-horizontal-white.svg" alt=""><b>978-328-2406</b></div>
+</div>
+
+<div class="post bg-tint" id="post-service" data-export="post-03-house-cleaning.png">
+    <div class="photo"><span><svg viewBox="0 0 24 24"><path fill="currentColor" d="M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1 12h14l-4.5-6-3.5 4.5-2.5-3z"/></svg>Your photo</span></div>
+    <div class="pad">
+        <span class="tag" style="color:var(--green);font-size:30px">New service</span>
+        <h2 style="margin-top:16px">House Cleaning</h2>
+        <p class="lead">Weekly · Bi-weekly · Monthly · Move-in / out</p>
+    </div>
+    <div class="brandbar"><img src="../../assets/img/logo-horizontal-white.svg" alt=""><b>Free quote · 978-328-2406</b></div>
+</div>
+
+<div class="post" id="post-reel" data-export="post-04-reel-cover.png">
+    <div class="photo"></div>
+    <div class="play"></div>
+    <h2 class="title"><span>REEL</span><br>60-second carpet rescue</h2>
+    <div class="brandbar"><img src="../../assets/img/logo-horizontal-white.svg" alt=""><b>Carpet &amp; Floor Care</b></div>
+</div>
+
+<div class="post bg-forest broom-pattern" id="post-review" data-export="post-05-review.png">
+    <div class="pad">
+        <span class="tag" style="color:var(--leaf);font-size:30px">What our clients say</span>
+        <div class="q" style="margin-top:50px">“</div>
+        <blockquote>Paste a real client review here, in their own words.</blockquote>
+        <div class="stars">★★★★★</div>
+        <p class="who">Client name · Practice / School · City, MA</p>
+    </div>
+    <div class="brandbar"><img src="../../assets/img/logo-horizontal-white.svg" alt=""><b>Google · Facebook review</b></div>
+</div>
+
+<div class="post bg-forest broom-pattern" id="post-bilingual" data-export="post-06-bilingual.png">
+    <div class="pad">
+        <h2>We speak <span>English</span></h2>
+        <div class="es"><h2>Hablamos <span>español</span></h2></div>
+        <p class="lead">Bilingual crew and supervisors for clinics, schools and homes across the Merrimack Valley.</p>
+    </div>
+    <div class="brandbar"><img src="../../assets/img/logo-horizontal-white.svg" alt=""><b>978-328-2406</b></div>
+</div>
+
+<div class="post bg-tint" id="post-years" data-export="post-07-20-years.png">
+    <div class="pad">
+        <span class="tag" style="color:var(--green);font-size:30px">Thank you, Massachusetts</span>
+        <div class="big">20+</div>
+        <h2>years keeping clinics, schools &amp; homes clean</h2>
+    </div>
+    <div class="brandbar"><img src="../../assets/img/logo-horizontal-white.svg" alt=""><b>Since day one in Dracut</b></div>
+</div>
+
+<div class="post bg-tint" id="post-team" data-export="post-08-team.png">
+    <div class="photo"><span><svg viewBox="0 0 24 24"><path fill="currentColor" d="M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1 12h14l-4.5-6-3.5 4.5-2.5-3z"/></svg>Team photo</span></div>
+    <div class="pad">
+        <h2>Meet the crew behind the shine</h2>
+    </div>
+    <div class="brandbar"><img src="../../assets/img/logo-horizontal-white.svg" alt=""><b>Trained · Uniformed · Local</b></div>
+</div>
+
+<div class="post bg-forest broom-pattern" id="post-quote" data-export="post-09-free-quote.png">
+    <div class="pad">
+        <span class="tag" style="color:var(--leaf);font-size:30px">Free, no-obligation</span>
+        <h2 style="margin-top:20px">Get your <span>free quote</span></h2>
+        <div class="ways">
+            <div><i><svg viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg></i>978-328-2406</div>
+            <div><i><svg viewBox="0 0 24 24"><path fill="currentColor" d="M4 3h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H8l-5 4V4a1 1 0 0 1 1-1z"/></svg></i>WhatsApp · DM us</div>
+            <div><i><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm6.9 6h-3a15.7 15.7 0 0 0-1.3-4A8 8 0 0 1 18.9 8zM12 4c.8 1.2 1.5 2.5 1.9 4h-3.8c.4-1.5 1.1-2.8 1.9-4zM4.3 14a8.2 8.2 0 0 1 0-4h3.4a16.5 16.5 0 0 0 0 4zm.8 2h3a15.7 15.7 0 0 0 1.3 4A8 8 0 0 1 5.1 16zm3-8h-3a8 8 0 0 1 4.3-4 15.7 15.7 0 0 0-1.3 4zM12 20c-.8-1.2-1.5-2.5-1.9-4h3.8c-.4 1.5-1.1 2.8-1.9 4zm2.3-6H9.7a14.7 14.7 0 0 1 0-4h4.6a14.7 14.7 0 0 1 0 4zm.3 6a15.7 15.7 0 0 0 1.3-4h3a8 8 0 0 1-4.3 4zm1.7-6a16.5 16.5 0 0 0 0-4h3.4a8.2 8.2 0 0 1 0 4z"/></svg></i>claucleaningcorp.com</div>
+        </div>
+        <p class="swipe">Reply within one business day</p>
+    </div>
+    <div class="brandbar"><img src="../../assets/img/logo-horizontal-white.svg" alt=""><b>Dracut, MA</b></div>
+</div>
+
+<!-- STORY TEMPLATE (1080 x 1920) -->
+<div class="story" id="story-template" data-export="story-template.png">
+    <div class="photo"><span><svg viewBox="0 0 24 24"><path fill="currentColor" d="M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1 12h14l-4.5-6-3.5 4.5-2.5-3z"/></svg>Your photo / video</span></div>
+    <div class="shade"></div>
+    <h2>Today in <span>Lowell</span> ✨</h2>
+    <div class="brandbar"><img src="../../assets/img/logo-horizontal-white.svg" alt=""><b>978-328-2406</b></div>
+</div>
+
+</body>
+</html>
