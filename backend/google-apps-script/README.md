@@ -14,7 +14,7 @@ cualquier hosting estático (GitHub Pages, Netlify, etc.).
 3. **Configuración del proyecto (⚙) → Propiedades del script** y agrega:
    | Propiedad          | Obligatoria | Valor |
    |--------------------|-------------|-------|
-   | `NOTIFY_EMAIL`     | recomendada | Correo que recibe el aviso de cada solicitud (p. ej. `info@sgmcleansolutions.com`). |
+   | `NOTIFY_EMAIL`     | recomendada | Correo que recibe el aviso de cada solicitud (p. ej. `info@sgmlcleansolutions.com`). |
    | `SHEET_ID`         | no          | ID de la hoja si el script **no** está vinculado a ella. |
    | `TURNSTILE_SECRET` | no          | Clave secreta de Cloudflare Turnstile (ver abajo). |
 4. **Implementar → Gestionar implementaciones**:
